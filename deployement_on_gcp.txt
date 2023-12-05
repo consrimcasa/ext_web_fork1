@@ -1,0 +1,13 @@
+1- create Dockerfile and set the configurations.
+2- run the Dockerfile to build a docker image => docker build -t image_name => [-t image_name]: to specify the image name
+3- create a gcp acount
+4- select or create a project on gcp
+5- enable Container Registry and Cloud Run
+6- download gcp sdk
+7- initialize the gcp sdk
+8- login to your gcp acount from your computer using gcp sdk => gcloud auth login
+9- push your local docker image to the container Registry =>
+    a- tag the image => docker tag image_name gcr.io/project_id/image_name => [gcr.io/project_id/image_name] : tag_to_in_container_registry
+    b- push the tag => docker push gcr.io/project_id/image_name
+10- go to Cloud Run then create a new Service then follow the setups and shoose the image pushed on the container Registry
+

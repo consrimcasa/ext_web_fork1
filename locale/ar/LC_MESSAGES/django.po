@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-20 09:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: minister_ext/settings.py:151 templates/base.html:291 templates/base.html:293
+msgid "Arabic"
+msgstr "عربي"
+
+#: minister_ext/settings.py:152 templates/base.html:285 templates/base.html:287
+msgid "French"
+msgstr "فرنسي"
+
+#: templates/base.html:201 templates/base.html:217
+msgid "القنصلية العامة لموريتانيا بالدار البيضاء"
+msgstr "القنصلية العامة للجمهورية الاسلامية الموريتانية بالدار البيضاء"
+
+#: templates/base.html:243 templates/base.html:252
+msgid "Home"
+msgstr "الرئيسية"
+
+#: templates/base.html:244 templates/base.html:255
+msgid "Announcements"
+msgstr "الإعلانات"
+
+#: templates/base.html:245 templates/base.html:258
+msgid "Consulate"
+msgstr "القنصلية"
+
+#: templates/base.html:246 templates/base.html:261
+msgid "Services"
+msgstr "الخدمات"
+
+#: templates/base.html:247 templates/base.html:264
+msgid "شؤون الطلاب"
+msgstr "شؤون الطلاب"
+
+#: templates/base.html:277
+msgid "languages"
+msgstr "اللغات"
+
+#: templates/base.html:329
+msgid "التواصل مع القنصلية"
+msgstr "التواصل مع القنصلية"
+
+#: templates/base.html:336
+msgid ": العنوان "
+msgstr ": العنوان "
+
+#: templates/base.html:337
+msgid "زنقة ..................."
+msgstr "زنقة ..................."
+
+#: templates/base.html:344
+msgid "هاتف :"
+msgstr "هاتف:"
+
+#: templates/base.html:354
+msgid "البريد الالكتروني : "
+msgstr "البريد الإلكتروني: "
+
+#: templates/base.html:366
+msgid "أوقات الدوام"
+msgstr "أوقات الدوام"
+
+#: templates/base.html:371
+msgid "الدوام العادي :"
+msgstr "الدوام العادي:"
+
+#: templates/base.html:372
+msgid ""
+"من التاسعة والنصف صباحًا حتى الرابعة والنصف مساءً باستثناء يوم الجمعة من "
+"الثامنة حتى الثانية عشر"
+msgstr ""
+"من التاسعة والنصف صباحًا حتى الرابعة والنصف مساءً باستثناء يوم الجمعة من "
+"الثامنة حتى الثانية عشر"
+
+#: templates/base.html:375
+msgid "الدوام في شهر رمضان :"
+msgstr "الدوام في شهر رمضان:"
+
+#: templates/base.html:376
+msgid "من التاسعة والنصف حتى الثالثة ."
+msgstr "من التاسعة والنصف حتى الثالثة."
+
+#: templates/base.html:417 templates/base.html:420
+msgid "مواقع مهمة"
+msgstr "مواقع مهمة"
+
+#: templates/base.html:424
+msgid "وزارة الشؤون الخارجية والتعاون"
+msgstr "وزارة الشؤون الخارجية والتعاون"
+
+#: templates/base.html:430
+msgid "الوكالة الموريتانية  للأنباء"
+msgstr "الوكالة الموريتانية للأنباء"
+
+#: templates/base.html:437
+msgid "البوابة بالموريتانية للتنمية "
+msgstr "البوابة بالموريتانية للتنمية"
+
+#: templates/base.html:451
+msgid ""
+"© 2023 Embassy of the Islamic Republic of Mauritania in Morocco. All rights "
+"reserved."
+msgstr ""
+"© 2023 القنصلية العامة للجمهورية الاسلامية الموريتانية بالدار البيضاء. كل الحقوق محفوظة."
+
+
+#: templates/base.html:328 templates/base.html:567
+msgid "كلمة ترحيب"
+msgstr "كلمة ترحيب"
+
+#: templates/base.html:329
+msgid "السيرة الذاتية للقنصل العام"
+msgstr "السيرة الذاتية للقنصل العام"
+
+#: templates/base.html:568
+msgid "السيرة الذاتية"
+msgstr "السيرة الذاتية"
+
+#: templates/base.html:343
+msgid "الوثائق والمعاملات القنصلية للمواطنين"
+msgstr "الوثائق والمعاملات القنصلية للمواطنين"
+
+#: templates/base.html:330
+msgid "طاقم القنصلية "
+msgstr "طاقم القنصلية "
+
+#: templates/base.html:345
+msgid "الشؤون الاجتماعية و خدمات للأجانب"
+msgstr "الشؤون الاجتماعية و خدمات للأجانب"
+
+
+msgid "جاري تحديث الصفحة"
+msgstr "جاري تحديث الصفحة"
+
+msgid " أكمل القراءة "
+msgstr " أكمل القراءة "
+
+msgid "الشؤون الاجتماعية" 
+msgstr "الشؤون الاجتماعية" 
+
+msgid "خدمات للأجانب"
+msgstr "خدمات للأجانب"
+
+msgid "Internal Server Error"
+msgstr "خطأ داخلي في الخادم"
+
+msgid "Back to Home"
+msgstr "العودة إلى الصفحة الرئيسية"
+
+msgid "Page Not Found"
+msgstr "الصفحة غير موجودة"
+
+msgid "Agence de Promotion des Investissements en Mauritanie"
+msgstr "

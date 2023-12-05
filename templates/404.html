@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{% load i18n %}
+{% block content %}
+
+<div class="bg-light d-flex align-items-center justify-content-center" style="height: 100vh;">
+    <div class="text-center">
+        <h1 class="display-1 text-primary">404</h1>
+        <p class="lead">{% trans "Page Not Found" %}</p>
+        <a href="/" class="btn btn-primary"> {% trans "Back to Home" %} </a>
+    </div>
+</div>
+
+{% endblock%}

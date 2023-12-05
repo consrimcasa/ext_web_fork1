@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{% get_current_language as LANGUAGE_CODE %}
+
+{% block content %}
+
+<div class="col">
+    
+    <div class="col text-justify">
+        <h2 class="text-center">{% trans "طاقم القنصلية" %}</h2>
+        <br>
+        <table class="table table-striped {%if LANGUAGE_CODE == 'ar' %} text-right {% endif%} text-left">
+            <thead>
+                <tr>
+                    <th scope="col">{% trans "الاسم" %}</th>
+                    <th scope="col">{% trans "المنصب" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{% trans "الطالب المختار الشيخ محمد المجتبى" %}</td>
+                    <td>{% trans "القنصل العام" %}</td>
+                </tr>
+                <tr>
+                    <td>{% trans "محمد مولود محمد سالم" %}</td>
+                    <td>{% trans "القنصل العام المساعد" %}</td>
+                </tr>
+                <tr>
+                    <td>{% trans "محمد الله اطفيل" %}</td>
+                    <td>{% trans "قنصل مساعد مكلف بالشؤون الاجتماعية" %}</td>
+                </tr>
+                <!-- Additional staff members... -->
+                <tr>
+                    <td>{% trans "فاطمة محمد المصطفى" %}</td>
+                    <td>{% trans "قنصل مساعد مكلفة بالحالة المدنية" %}</td>
+                </tr>
+                <tr>
+                    <td>{% trans "مكحلة عبد الرحمن" %}</td>
+                    <td>{% trans "قنصل مساعد نائب المكلفة بالحالة المدنية" %}</td>
+                </tr>
+                <!-- More rows as needed... -->
+                <tr>
+                    <td>{% trans "........" %}</td>
+                    <td>{% trans "محاسب" %}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+{% endblock %}

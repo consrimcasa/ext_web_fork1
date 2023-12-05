@@ -1,0 +1,1063 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: app1/templates/app1/consulate.html:55
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-26 19:09+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: app1/apps.py:8
+msgid "app1"
+msgstr "app1"
+
+#: app1/models.py:7
+msgid "Image"
+msgstr "Image"
+
+#: app1/models.py:8
+msgid "Title"
+msgstr "Titre"
+
+#: app1/models.py:9
+msgid "Author"
+msgstr "Auteur"
+
+#: app1/models.py:11
+msgid "Content"
+msgstr "Contenu"
+
+#: app1/models.py:12
+msgid "Published date"
+msgstr "Date de publication"
+
+#: app1/models.py:19
+msgid "Article"
+msgstr "Article"
+
+#: app1/models.py:20
+msgid "Articles"
+msgstr "Articles"
+
+#: app1/templates/app1/affaires_sociales_services_etrangers.html:15
+#: app1/templates/app1/services.html:180
+msgid "الشؤون الاجتماعية"
+msgstr "Affaires sociales"
+
+#: app1/templates/app1/affaires_sociales_services_etrangers.html:18
+#: app1/templates/app1/services.html:182
+msgid ""
+"تتولى المصلحة المكلفة بالعمل الاجتماعي في القنصلية متابعة وتنسيق ملف التعاون "
+"في مجال التكفل الطبي للمواطنين الموريتانيين الذين يتابعون العلاج في "
+"المستشفيات المغربية، والذين تتكلف الدولة بعلاجهم(من خلال وزارة العمل "
+"الاجتماعي)،"
+msgstr ""
+"Le service chargé des affaires sociales au consulat est responsable du suivi "
+"et de la coordination du dossier de coopération dans le domaine de la prise "
+"en charge médicale des citoyens mauritaniens suivant un traitement dans les "
+"hôpitaux marocains, pris en charge par l'État (via le ministère du Travail "
+"social)."
+
+# #############################
+#: app1/templates/app1/affaires_sociales_services_etrangers.html:19
+#: app1/templates/app1/services.html:183
+msgid ""
+"تتمثل المهمة العامة للمصلحة في برمجة وتنسيق المواعيد الطبية لهؤلاء وتوجيههم "
+"للمستشفيات، وكذلك توفير وثائق التكفل اللازمة."
+msgstr ""
+"La mission générale du service consiste à programmer et coordonner les "
+"rendez-vous médicaux pour ces personnes, les orienter vers les hôpitaux, et "
+"fournir les documents nécessaires."
+
+#: app1/templates/app1/affaires_sociales_services_etrangers.html:26
+#: app1/templates/app1/services.html:190
+msgid "خدمات للأجانب(زيارة موريتانيا، التأشيرات)"
+msgstr "Services pour les étrangers (visite en Mauritanie, visas)"
+
+#: app1/templates/app1/affaires_sociales_services_etrangers.html:29
+#: app1/templates/app1/services.html:192
+msgid "يتم تقديم طلبات الإقامة لدى مصالح الشرطة المختصة ويتكون الملف عادة من:"
+msgstr ""
+"Les demandes de séjour sont déposées auprès des services de police et le "
+"dossier est généralement composé de :"
+
+#: app1/templates/app1/affaires_sociales_services_etrangers.html:32
+#: app1/templates/app1/services.html:195
+msgid ""
+"جواز السفر وتأشيرة الدخول (بالنسبة للطلاب يجب ان يحصلوا على تأشيرة طالب من "
+"السفارة أو القنصلية المغربية مسبقا)"
+msgstr ""
+"Le passeport et le visa d'entrée (pour les étudiants, ils doivent obtenir un "
+"visa étudiant de l'ambassade ou du consulat marocain au préalable)"
+
+#: app1/templates/app1/affaires_sociales_services_etrangers.html:33
+#: app1/templates/app1/services.html:196
+msgid ""
+"عقد إيجار(يحدد عنوان السكن) أو إفادة ملكية في حالة الملكية، أو إفادة سكن في "
+"حي جامعي بالنسبة للطلاب"
+msgstr ""
+"Un contrat de location (précisant l'adresse de résidence), un certificat de "
+"propriété en cas de propriété, ou une attestation de résidence dans un "
+"quartier universitaire pour les étudiants."
+
+#: app1/templates/app1/affaires_sociales_services_etrangers.html:34
+#: app1/templates/app1/services.html:197
+msgid "إفادة منحة بالنسبة للطلاب الممنوحين"
+msgstr "Attestation de bourse pour les étudiants boursiers"
+
+#: app1/templates/app1/affaires_sociales_services_etrangers.html:35
+#: app1/templates/app1/services.html:198
+msgid "إفادة تكفل بالنسبة للطلاب غير الممنوحين"
+msgstr "Attestation de prise en charge pour les étudiants non boursiers"
+
+#: app1/templates/app1/affaires_sociales_services_etrangers.html:36
+#: app1/templates/app1/services.html:199
+msgid "تسجيل قنصلي"
+msgstr "Enregistrement consulaire"
+
+# ############################
+#: app1/templates/app1/announcements.html:14 app1/templates/app1/home.html:24
+#: app1/templates/app1/home.html:57
+msgid "الاخبار"
+msgstr "Les nouvelles"
+
+#: app1/templates/app1/announcements.html:35
+msgid "الإعلانات"
+msgstr "Les annonces"
+
+#: app1/templates/app1/bienvenue.html:40 app1/templates/app1/home.html:19
+msgid "كلمة ترحيب"
+msgstr "Mot de bienvenue"
+
+#: app1/templates/app1/bienvenue.html:42
+msgid ""
+"في إطار مهمتها العامة المتمثلة في حماية ورعاية مصالح المواطنين الموريتانيين "
+"المقيمين بالمملكة المغربية أو العابرين لها، وحرصا على التواصل مع هؤلاء "
+"المواطنين وتقريب الخدمات منهم، تجسيدا للإرادة السامية لفخامة رئيس الجمهورية "
+"السيد محمد ولد الشيخ الغزواني بربط الصلة بالجالية الوطنية في الخارج وجعلها "
+"على في صلب الرعاية والاهتمام ، ومن أجل د تفاعل أكثر سرعة وانسيابا مع تطلعات "
+"هؤلاء المواطنين ،جاء قرار افتتاح القنصلية العامة للجمهورية الإسلامية "
+"الموريتانية بالدار البيضاء لتشكل أداة لخدمة أفراد جاليتنا بالمملكة المغرية "
+"الشقيقة ، وإنه ليسعدنا في القنصلية أن نضع رهن إشارة أفراد جاليتنا هذا الموقع "
+"الألكتروني ليشكل منصة للتفاعل وتوفير المعلومات المهمة لهم ، آملين أن يجدو "
+"فيه ما يحتاجونه من معلومات وتوجيهات تسهل حصولهم على الخدمات وتبسط "
+"الإجراءان ، دون أن يكون بديلا عن تواصلهم المباشر مع القنصلية التي ستكون "
+"بكافة مصالحها وطواقمها رهن إشارتهم وتحت تصرفهم."
+msgstr ""
+"Dans le cadre de sa mission générale visant à protéger et prendre soin des "
+"intérêts des citoyens mauritaniens résidant au Maroc ou le traversant, et "
+"dans un souci de communication avec ces citoyens et de rapprochement des "
+"services à leur égard, concrétisant la volonté sublime de Son Excellence le "
+"Président de la République, Monsieur Mohamed Ould Cheikh El Ghazouani, de "
+"renforcer les liens avec la communauté nationale à l'étranger et de la "
+"placer au cœur de l'attention et des soins, la décision d'ouvrir le consulat "
+"général de la République islamique mauritanienne à Casablanca a été prise "
+"pour être un instrument au service des membres de notre communauté dans le "
+"royaume frère du Maroc. Nous sommes ravis au consulat de mettre à la "
+"disposition de nos concitoyens ce site web, qui constitue une plateforme "
+"d'interaction et de fourniture d'informations importantes pour eux. Nous "
+"espérons qu'ils y trouveront les informations et les orientations "
+"nécessaires facilitant l'obtention des services et simplifiant les "
+"procédures, sans pour autant se substituer à leur communication directe avec "
+"le consulat, qui mettra toutes ses ressources et son personnel à leur "
+"disposition."
+
+#: app1/templates/app1/bienvenue.html:44 app1/templates/app1/home.html:18
+msgid "القنصل العام :"
+msgstr "Consul général :"
+
+#: app1/templates/app1/bienvenue.html:44 app1/templates/app1/consulate.html:22
+#: app1/templates/app1/home.html:18
+msgid "الطالب المختار الشيخ محمد المجتبى"
+msgstr "Thaleb El-Moukhtar Sheikh Mohamed Al-Mujtaba"
+
+#: app1/templates/app1/consulate.html:11
+msgid "طاقم القنصلية"
+msgstr "Équipe du consulat"
+
+#: app1/templates/app1/consulate.html:16
+msgid "الاسم"
+msgstr "Nom"
+
+#: app1/templates/app1/consulate.html:17
+msgid "المنصب"
+msgstr "Poste"
+
+#: app1/templates/app1/consulate.html:23
+msgid "القنصل العام"
+msgstr "Consul général"
+
+#: app1/templates/app1/consulate.html:26
+msgid "محمد مولود محمد سالم"
+msgstr "Mohamed Moulood Mohamed Salem"
+
+#: app1/templates/app1/consulate.html:27
+msgid "القنصل العام المساعد"
+msgstr "Consul général adjoint"
+
+#: app1/templates/app1/consulate.html:30
+msgid "محمد الله اطفيل"
+msgstr "Mohamed Allah Atfeil"
+
+#: app1/templates/app1/consulate.html:31
+msgid "قنصل مساعد مكلف بالشؤون الاجتماعية"
+msgstr "Consul adjoint chargé des affaires sociales"
+
+#: app1/templates/app1/consulate.html:35
+msgid "فاطمة محمد المصطفى"
+msgstr "Fatima Mohamed Al-Mustafa"
+
+#: app1/templates/app1/consulate.html:36
+msgid "قنصل مساعد مكلفة بالحالة المدنية"
+msgstr "Consul adjoint chargé de l'état civil"
+
+#: app1/templates/app1/consulate.html:39
+msgid "مكحلة عبد الرحمن"
+msgstr "Mokhala Abderrahman"
+
+#: app1/templates/app1/consulate.html:40
+msgid "قنصل مساعد نائب المكلفة بالحالة المدنية"
+msgstr "Consul adjoint délégué chargé de l'état civil"
+
+#: app1/templates/app1/consulate.html:44
+msgid "........"
+msgstr "........"
+
+#: app1/templates/app1/consulate.html:45
+msgid "محاسب"
+msgstr "Comptable"
+
+#: app1/templates/app1/consulate.html:52
+msgid "مهام القنصلية:"
+msgstr "Fonctions du consulat"
+
+#: app1/templates/app1/cv.html:49 app1/templates/app1/home.html:20
+msgid "السيرة الذاتية"
+msgstr "Curriculum Vitae"
+
+#: app1/templates/app1/documents_citoyens.html:13
+#: app1/templates/app1/services.html:15
+msgid "الوثائق والمعاملات القنصلية للمواطنين"
+msgstr "Documents et transactions consulaires pour les citoyens"
+
+#: app1/templates/app1/documents_citoyens.html:19
+#: app1/templates/app1/services.html:16
+msgid "الوثائق القنصلية:"
+msgstr "Documents consulaires :"
+
+#: app1/templates/app1/documents_citoyens.html:22
+#: app1/templates/app1/services.html:19
+msgid ""
+"تشكل الجانب الهام في عمل  القنصلية، وفي الوقت الحالي تصدر  القنصلية  الوثائق "
+"التالية:"
+msgstr ""
+"La partie importante du travail du consulat, et actuellement le consulat "
+"délivre les documents suivants :"
+
+#: app1/templates/app1/documents_citoyens.html:23
+#: app1/templates/app1/services.html:20
+msgid ""
+"إذن المرور: وثيقة مؤقتة تمكن صاحبها من السفر في حالة ضياع جواز السفر او "
+"انتهاء سريانه، وأيضا  تمنح للمواليد الجدد؛"
+msgstr ""
+"Permis de passage : Document temporaire permettant au titulaire de voyager "
+"en cas de perte ou d'expiration du passeport, et également délivré aux "
+"nouveaux-nés ;"
+
+# /////////
+#: app1/templates/app1/documents_citoyens.html:24
+#: app1/templates/app1/services.html:21
+msgid ""
+"تسجيل قنصلي: وثيقة تقدمها القنصلية للمواطنين الذين قاموا بتسجيل أنفسهم لدى "
+"القنصلية."
+msgstr ""
+"Enregistrement consulaire : Document délivré par le consulat aux citoyens "
+"qui se sont enregistrés auprès du consulat."
+
+#: app1/templates/app1/documents_citoyens.html:25
+#: app1/templates/app1/services.html:22
+msgid ""
+"رخصة نقل جثمان: وثيقة تمنحها القنصلية بغية الترخيص في نقل جثامين الرعايا "
+"الذين توفوا في دائرتها وترغب عائلاتهم في دفنهم بالبلاد ؛"
+msgstr ""
+"Permis de transport de corps : Document délivré par le consulat pour "
+"autoriser le transport des corps des citoyens décédés dans sa "
+"circonscription et dont les familles souhaitent les inhumer dans le pays."
+
+#: app1/templates/app1/documents_citoyens.html:26
+#: app1/templates/app1/services.html:23
+msgid ""
+"ترخيص بالدفن: وثيقة تمنحها القنصلية للسماح بدفن الرعايا الذين توفوا في "
+"دائرتها."
+msgstr ""
+"Permis d'inhumation : Document délivré par le consulat pour autoriser "
+"l'enterrement des citoyens décédés dans sa circonscription."
+
+#: app1/templates/app1/documents_citoyens.html:27
+#: app1/templates/app1/services.html:24
+msgid ""
+"وثيقة مطابقة أسماء: إفادة تصدرها القنصلية لتأكيد تطابق أسماء مختلفة في "
+"وثيقتين أو أكثر."
+msgstr ""
+"Certificat de concordance des noms : Attestation délivrée par le consulat "
+"pour confirmer la concordance des noms sur deux documents ou plus."
+
+#: app1/templates/app1/documents_citoyens.html:28
+#: app1/templates/app1/services.html:25
+msgid ""
+"وثيقة تكفل: إفادة تصدرها القنصلية بناء على تعهد موثق لدى جهة مختصة يفيد "
+"بوجود كفيل للطلاب غير المستفيدين من منحة حكومية."
+msgstr ""
+"Certificat de garantie : Attestation délivrée par le consulat sur la base "
+"d'un engagement légal auprès d'une autorité compétente, confirmant la "
+"présence d'un garant pour les étudiants non bénéficiaires d'une bourse "
+"gouvernementale."
+
+#: app1/templates/app1/documents_citoyens.html:30
+#: app1/templates/app1/services.html:27
+msgid ""
+"تصديق الوثائق: توفر القنصلية خدمات تصديق الوثائق بشكل ، على أن تكون هذه "
+"الوثائق مستوفية للشروط المحددة."
+msgstr ""
+"Légalisation des documents : Le consulat fournit des services de "
+"légalisation des documents, à condition que ces documents répondent aux "
+"conditions spécifiées."
+
+#: app1/templates/app1/documents_citoyens.html:31
+#: app1/templates/app1/services.html:28
+msgid ""
+"الأهلية للزواج: وثيقة تمنحها  القنصلية للمواطن الذي ينوي الزواج من أجنبية "
+"حسب ما تتطلبه قوانين بلدها"
+msgstr ""
+"Certificat de capacité matrimoniale : Document délivré par le consulat au "
+"citoyen qui souhaite se marier avec une étrangère, conformément aux lois de "
+"son pays."
+
+#: app1/templates/app1/documents_citoyens.html:34
+#: app1/templates/app1/services.html:31
+msgid "أنواع الوثائق وطرق الحصول عليها:"
+msgstr "Types de documents et modalités d'obtention :"
+
+#: app1/templates/app1/documents_citoyens.html:38
+#: app1/templates/app1/services.html:35
+msgid "الوثيقة"
+msgstr "Document"
+
+#: app1/templates/app1/documents_citoyens.html:39
+#: app1/templates/app1/services.html:36
+msgid "عناصر الملف المطلوبة"
+msgstr "Éléments du dossier requis"
+
+#: app1/templates/app1/documents_citoyens.html:44
+#: app1/templates/app1/services.html:41
+msgid "التسجيل القنصلي (البطاقة القنصلية)"
+msgstr "Enregistrement consulaire (carte consulaire)"
+
+#: app1/templates/app1/documents_citoyens.html:45
+#: app1/templates/app1/services.html:42
+msgid ""
+"نسختان من جواز سفر ساري المفعول، تأشيرة سارية/أو بطاقة إقامة، 4 صور شمسية "
+"حديثة، صفحة الدخول للتراب المغربي، تعبئة استمارة التسجيل القنصلي، مستخرج من "
+"عقد الميلاد"
+msgstr ""
+"Deux copies du passeport en cours de validité, visa en cours/ou carte de "
+"séjour, 4 photos récentes, page d'entrée sur le territoire marocain, "
+"remplissage du formulaire d'enregistrement consulaire, extrait de l'acte de "
+"naissance."
+
+#: app1/templates/app1/documents_citoyens.html:48
+#: app1/templates/app1/services.html:45
+msgid "تسهيل مغادرة"
+msgstr "Facilitation du départ"
+
+#: app1/templates/app1/documents_citoyens.html:49
+#: app1/templates/app1/services.html:46
+msgid ""
+"نسخة من جواز السفر، نسخة من تأشيرة الدخول أو بطاقة الإقامة المنتهية "
+"الصلاحية، نسخة من تذكرة السفر تحدد تاريخ سفر المعني، ضرورة وجود إذن بالسفر "
+"للأطفال القاصرين، إيداع الطلب لدى القنصلية بمدة 15 يوما قبل تاريخ السفر"
+msgstr ""
+"Une copie du passeport, une copie du visa ou de la carte de séjour expirée, "
+"une copie du billet d'avion précisant la date du voyage du concerné, "
+"nécessité d'une autorisation de voyage pour les enfants mineurs, dépôt de la "
+"demande au consulat 15 jours avant la date du voyage."
+
+#: app1/templates/app1/documents_citoyens.html:52
+#: app1/templates/app1/services.html:49
+msgid "إذن مرور"
+msgstr "Autorisation de passage"
+
+#: app1/templates/app1/documents_citoyens.html:53
+#: app1/templates/app1/services.html:50
+msgid ""
+"إثبات ضياع جواز السفر أو انتهاء سريانه، إثبات الميلاد بالمغرب بالنسبة "
+"للمواليد الجدد، جوازات سفر الوالدين السارية(بالنسبة للأطفال)، صور شمسية "
+"حديثة للمعني، إذن أبوي بالسفر بالنسبة للقصر صادر عن موثق عقود معتمد ومصدق "
+"لدى وزارة الخارجية"
+msgstr ""
+"Justification de la perte ou de l'expiration du passeport, acte de naissance "
+"au Maroc pour les nouveau-nés, passeports valides des parents (pour les "
+"enfants), photos récentes du concerné, autorisation parentale de voyage pour "
+"les mineurs délivrée par un notaire agréé et légalisée par le ministère des "
+"Affaires étrangères."
+
+#: app1/templates/app1/documents_citoyens.html:56
+#: app1/templates/app1/services.html:53
+msgid "إفادة مطابقة الاسم"
+msgstr "Certificat de concordance des noms"
+
+#: app1/templates/app1/documents_citoyens.html:57
+#: app1/templates/app1/services.html:54
+msgid ""
+"جواز سفر ساري/ مستخرج عقد ازدياد حديث، الوثيقة المطلوب مطابقتها مصدقة من "
+"الجهات المختصة"
+msgstr ""
+"Passeport valide/extrait récent de l'acte de naissance, le document devant "
+"être concordant est légalisé par les autorités compétentes."
+
+#: app1/templates/app1/documents_citoyens.html:60
+#: app1/templates/app1/services.html:57
+msgid "إفادة التكفل"
+msgstr "Certificat de garantie"
+
+#: app1/templates/app1/documents_citoyens.html:61
+#: app1/templates/app1/services.html:58
+msgid ""
+"تصريح/التزام صادر عن موثق عقود معتمد ومصدق لدى وزارة الخارجية يفيد بوجود "
+"متكفل بتسديد المبلغ المحدد؛، إفادة التسجيل للعام الجامعي الجاري"
+msgstr ""
+"Une déclaration/engagement émise par un notaire agréé et légalisée par le "
+"ministère des Affaires étrangères indiquant qu'il y a un garant pour payer "
+"le montant spécifié ; certificat d'inscription pour l'année universitaire en "
+"cours."
+
+#: app1/templates/app1/documents_citoyens.html:64
+#: app1/templates/app1/services.html:61
+msgid "تصديق الوثائق"
+msgstr "Légalisation des documents"
+
+#: app1/templates/app1/documents_citoyens.html:65
+#: app1/templates/app1/services.html:62
+msgid ""
+"الوثائق الأصلية، النسخ المراد تصديقها مصدقة مسبقا من الجهات المختصة، إثبات "
+"الصلة بالوثائق المعروضة للتصديق(المعني او من يوكله)"
+msgstr ""
+"Les documents originaux, les copies à légaliser déjà légalisées par les "
+"autorités compétentes, preuve du lien avec les documents présentés pour la "
+"légalisation (le concerné ou son mandataire)."
+
+#: app1/templates/app1/documents_citoyens.html:68
+#: app1/templates/app1/services.html:65
+msgid "إذن نقل جثمان"
+msgstr "Autorisation de transport de corps"
+
+#: app1/templates/app1/documents_citoyens.html:69
+#: app1/templates/app1/services.html:66
+msgid ""
+"طلب من عائلة المتوفي، إفادة وفاة موقعة من الطبيب الذي عاين المتوفي، جواز سفر "
+"المتوفي ومرافقه، تذاكر السفر"
+msgstr ""
+"Demande de la famille du défunt, certificat de décès signé par le médecin "
+"ayant examiné le défunt, passeport du défunt et de son accompagnateur, "
+"billets d'avion."
+
+# ####################################
+#: app1/templates/app1/documents_citoyens.html:72
+#: app1/templates/app1/services.html:69
+msgid "إذن دفن"
+msgstr "Autorisation d'inhumation"
+
+#: app1/templates/app1/documents_citoyens.html:73
+#: app1/templates/app1/services.html:70
+msgid ""
+"طلب عائلة المتوفى، إفادة وفاة موقعة من الطبيب الذي عاين المتوفي، جواز سفر "
+"المتوفي ومرافقه"
+msgstr ""
+" La famille du défunt est priée de fournir un certificat de décès signé par "
+"le médecin qui a examiné le défunt, ainsi que le passeport du défunt et de "
+"ses accompagnateurs. "
+
+#: app1/templates/app1/documents_citoyens.html:76
+#: app1/templates/app1/services.html:73
+msgid "أهلية الزواج"
+msgstr "Éligibilité au mariage"
+
+#: app1/templates/app1/documents_citoyens.html:77
+#: app1/templates/app1/services.html:74
+msgid ""
+"نسخة من جواز سفر المعني، نسخة من صفحة الدخول للتراب المغربي، نسخة من صحيفة "
+"السوابق العدلية، صورتين شمسيتين، نسخة من شهادة عدم الزواج أو حكم بثبوت "
+"الطلاق، نسخة من بطاقة التعريف الوطنية للزوجة، صورتين شمسيتين للزوجة"
+msgstr ""
+"Une copie du passeport du demandeur, une copie de la page d'entrée sur le "
+"territoire marocain, une copie du casier judiciaire, deux photos d'identité, "
+"une copie du certificat de célibat ou du jugement de divorce, une copie de "
+"la carte d'identité nationale de l'épouse, deux photos d'identité de l'épouse"
+
+#: app1/templates/app1/documents_citoyens.html:81
+#: app1/templates/app1/services.html:78
+msgid ""
+"التسجيل القنصلي والحصول على رقم قنصلي يعتبر شرطا للحصول  على  أي من الوثائق "
+"السابقة"
+msgstr ""
+"Inscription consulaire et obtention d'un numéro consulaire sont des "
+"conditions préalables pour l'obtention de tout document mentionné "
+"précédemment"
+
+#: app1/templates/app1/etat_civil.html:13 app1/templates/app1/services.html:86
+msgid "الحالة المدنية"
+msgstr "État civil"
+
+#: app1/templates/app1/etat_civil.html:25 app1/templates/app1/services.html:90
+msgid ""
+"يقوم مركز استقبال المواطنين بالقنصلية بتوفير خدمات الحالة المدنية لكافة "
+"المواطنين الموجودين بالمملكة المغربية ، حيث يوفر المكتب  الخدمات التالية:"
+msgstr ""
+"Le centre de réception des citoyens au consulat fournit des services d'état "
+"civil à tous les citoyens présents au Maroc. Le bureau propose les services "
+"suivants :"
+
+#: app1/templates/app1/etat_civil.html:28 app1/templates/app1/services.html:93
+msgid "إصدار وتجديد جوازات السفر"
+msgstr "Délivrance et renouvellement des passeports"
+
+#: app1/templates/app1/etat_civil.html:29 app1/templates/app1/services.html:94
+msgid "إصدار وتجديد بطاقة التعريف الوطنية"
+msgstr "Émission et renouvellement de la carte d'identité nationale"
+
+#: app1/templates/app1/etat_civil.html:30 app1/templates/app1/services.html:95
+msgid "تسجيل أحداث الحالة المدنية(الميلاد، الزواج، الطلاق، الوفاة)"
+msgstr ""
+"Enregistrement des événements d'état civil (naissance, mariage, divorce, "
+"décès)"
+
+#: app1/templates/app1/etat_civil.html:31 app1/templates/app1/services.html:96
+msgid "إصدار مستخرجات الحالة المدنية"
+msgstr "Émission d'extraits d'état civil"
+
+#: app1/templates/app1/etat_civil.html:33 app1/templates/app1/services.html:98
+msgid "تحدد رسوم خدمات الحالة المدنية كما هو موضح في الجدول التالي:"
+msgstr ""
+"Les frais des services d'état civil sont déterminés comme indiqué dans le "
+"tableau suivant :"
+
+#: app1/templates/app1/etat_civil.html:37 app1/templates/app1/services.html:102
+msgid "الرسوم"
+msgstr "Frais"
+
+#: app1/templates/app1/etat_civil.html:38 app1/templates/app1/services.html:103
+msgid "نوعية الطلب"
+msgstr "Type de demande"
+
+#: app1/templates/app1/etat_civil.html:43 app1/templates/app1/services.html:108
+msgid "841 أوقية"
+msgstr "841 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:44 app1/templates/app1/services.html:109
+msgid "الطلب الأول لجواز السفر العادي"
+msgstr "Première demande de passeport ordinaire"
+
+#: app1/templates/app1/etat_civil.html:47 app1/templates/app1/services.html:112
+msgid "1103 أوقية"
+msgstr "1103 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:48 app1/templates/app1/services.html:113
+msgid "الاستبدال الأول في حالة التلف أو الضياع للجواز العادي"
+msgstr ""
+"Premier remplacement en cas de perte ou de dommage du passeport ordinaire"
+
+#: app1/templates/app1/etat_civil.html:51 app1/templates/app1/services.html:116
+msgid "1496 أوقية"
+msgstr "1496 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:52 app1/templates/app1/services.html:117
+msgid "الاستبدال الثاني في حالة التلف أو الضياع للجواز العادي"
+msgstr ""
+"Deuxième remplacement en cas de perte ou de dommage du passeport ordinaire"
+
+#: app1/templates/app1/etat_civil.html:55 app1/templates/app1/services.html:120
+msgid "2020 أوقية"
+msgstr "2020 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:56 app1/templates/app1/services.html:121
+msgid "الاستبدال الثالث في حالة التلف أو الضياع للجواز العادي"
+msgstr ""
+"Troisième remplacement en cas de perte ou de dommage du passeport ordinaire"
+
+#: app1/templates/app1/etat_civil.html:59 app1/templates/app1/services.html:124
+msgid "2675 أوقية"
+msgstr "2675 ouguiyas"
+
+# #######################################
+#: app1/templates/app1/etat_civil.html:60 app1/templates/app1/services.html:125
+msgid "الاستبدال الرابع في حالة التلف أو الضياع للجواز العادي"
+msgstr ""
+"Quatrième remplacement en cas de perte ou de dommage du passeport ordinaire"
+
+#: app1/templates/app1/etat_civil.html:63 app1/templates/app1/services.html:128
+msgid "3253 أوقية"
+msgstr "3253 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:64 app1/templates/app1/services.html:129
+msgid "الطلب الأول لجواز VIP"
+msgstr "Première demande de passeport VIP"
+
+#: app1/templates/app1/etat_civil.html:67 app1/templates/app1/services.html:132
+msgid "4039 أوقية"
+msgstr "4039 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:68 app1/templates/app1/services.html:133
+msgid "الاستبدال الأول في حالة التلف أو الضياع لجواز VIP"
+msgstr "Premier remplacement en cas de perte ou de dommage du passeport VIP"
+
+#: app1/templates/app1/etat_civil.html:71 app1/templates/app1/services.html:136
+msgid "4694 أوقية"
+msgstr "4694 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:72 app1/templates/app1/services.html:137
+msgid "الاستبدال الثاني في حالة التلف أو الضياع لجواز VIP"
+msgstr "Deuxième remplacement en cas de perte ou de dommage du passeport VIP"
+
+#: app1/templates/app1/etat_civil.html:75 app1/templates/app1/services.html:140
+msgid "5349 أوقية"
+msgstr "5349 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:76 app1/templates/app1/services.html:141
+msgid "الاستبدال الثالث في حالة التلف أو الضياع لجواز VIP"
+msgstr "Troisième remplacement en cas de perte ou de dommage du passeport VIP"
+
+#: app1/templates/app1/etat_civil.html:79 app1/templates/app1/services.html:144
+msgid "5999 أوقية"
+msgstr "5999 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:80 app1/templates/app1/services.html:145
+msgid "الاستبدال الرابع في حالة التلف أو الضياع لجواز VIP"
+msgstr "Quatrième remplacement en cas de perte ou de dommage du passeport VIP"
+
+#: app1/templates/app1/etat_civil.html:83 app1/templates/app1/services.html:148
+msgid "38 أوقية"
+msgstr "38 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:84 app1/templates/app1/services.html:149
+msgid "الطلب الأول لبطاقة التعريف الوطنية"
+msgstr "Première demande de carte d'identité nationale"
+
+#: app1/templates/app1/etat_civil.html:87 app1/templates/app1/services.html:152
+msgid "77 أوقية"
+msgstr "77 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:88 app1/templates/app1/services.html:153
+msgid "الاستبدال الأول في حالة التلف أو الضياع لبطاقة التعريف الوطنية"
+msgstr ""
+"Premier remplacement en cas de perte ou de dommage de la carte d'identité "
+"nationale"
+
+#: app1/templates/app1/etat_civil.html:91 app1/templates/app1/services.html:156
+msgid "116 أوقية"
+msgstr "116 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:92 app1/templates/app1/services.html:157
+msgid "الاستبدال الثاني في حالة التلف أو الضياع لبطاقة التعريف الوطنية"
+msgstr ""
+"Deuxième remplacement en cas de perte ou de dommage de la carte d'identité "
+"nationale"
+
+#: app1/templates/app1/etat_civil.html:95 app1/templates/app1/services.html:160
+msgid "195 أوقية"
+msgstr "195 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:96 app1/templates/app1/services.html:161
+msgid "الاستبدال الثالث في حالة التلف أو الضياع لبطاقة التعريف الوطنية"
+msgstr ""
+"Troisième remplacement en cas de perte ou de dommage de la carte d'identité "
+"nationale"
+
+#: app1/templates/app1/etat_civil.html:99 app1/templates/app1/services.html:164
+msgid "273 أوقية"
+msgstr "273 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:100
+#: app1/templates/app1/services.html:165
+msgid "الاستبدال الرابع في حالة التلف أو الضياع لبطاقة التعريف الوطنية"
+msgstr ""
+"Quatrième remplacement en cas de perte ou de dommage de la carte d'identité "
+"nationale"
+
+#: app1/templates/app1/etat_civil.html:103
+#: app1/templates/app1/services.html:168
+msgid "5.5 أوقية"
+msgstr "5.5 ouguiyas"
+
+#: app1/templates/app1/etat_civil.html:104
+#: app1/templates/app1/services.html:169
+msgid "الحصول على مستخرجات الحالة المدنية"
+msgstr "Obtention d'extraits d'état civil"
+
+#: app1/templates/app1/etat_civil.html:109
+#: app1/templates/app1/services.html:174
+msgid ""
+"جدول يوضح رسوم استصدار مختلف الوثائق المؤمنة  بمركز استقبال المواطنين بالدرهم"
+msgstr ""
+"Un tableau indique les frais d'émission des différents documents certifiés "
+"par le centre de réception des citoyens, en dirhams"
+
+#: app1/templates/app1/home.html:72
+msgid " أكمل القراءة "
+msgstr ""
+
+#: app1/templates/app1/services.html:11
+msgid "الخدمات"
+msgstr "Services"
+
+#: app1/templates/app1/studentsinfo.html:9
+msgid "الشؤون الطلابية"
+msgstr "Affaires étudiantes"
+
+#: app1/templates/app1/studentsinfo.html:16
+msgid "معلومات تهم الطلاب"
+msgstr "Informations importantes pour les étudiants"
+
+#: app1/templates/app1/studentsinfo.html:19
+msgid "التسجيل"
+msgstr "Inscription"
+
+#: app1/templates/app1/studentsinfo.html:20
+msgid ""
+"تتولى المصلحة الثقافية بسفارتنا في الرباط مهمة تسيير شؤون الطلاب في ما يتعلق "
+"بالدراسة والتسجيل والشؤون الأكاديمية، ولا تتولى الملحقية تسلم ملفات الراغبين "
+"في التسجيل بالمغرب، وإنما تحيل الملفات الواردة إليها من وزارة التعليم العالي "
+"إلى الوكالة المغربية للتعاون الدولي. يتطلب التسجيل في المؤسسات العلمية "
+"المغربية ملفا يتكون من:"
+msgstr ""
+"Le service culturel de notre ambassade à Rabat est chargé de gérer les "
+"affaires des étudiants en ce qui concerne les études, l'inscription et les "
+"affaires académiques. La mission ne reçoit pas les dossiers des candidats à "
+"l'inscription au Maroc, mais elle transmet les dossiers qui lui parviennent "
+"du ministère de l'Enseignement supérieur à l'Agence marocaine de coopération "
+"internationale. L'inscription dans les institutions scientifiques marocaines "
+"nécessite un dossier composé de :"
+
+#: app1/templates/app1/studentsinfo.html:22
+msgid "موافقة الوكالة المغربية للتعاون الدولي."
+msgstr "Approbation de l'Agence marocaine de coopération internationale."
+
+#: app1/templates/app1/studentsinfo.html:23
+msgid "الحصول على رخصة للتسجيل صادرة عن قطاع التعليم العالي بالمغرب."
+msgstr ""
+"Obtention d'une autorisation d'inscription délivrée par le secteur de "
+"l'enseignement supérieur au Maroc."
+
+#: app1/templates/app1/studentsinfo.html:24
+msgid " الشهادات الأصلية. "
+msgstr " Les certificats originaux. "
+
+#: app1/templates/app1/studentsinfo.html:25
+msgid "صورة من جواز السفر."
+msgstr "Une copie du passeport."
+
+#: app1/templates/app1/studentsinfo.html:29
+msgid "المنحة"
+msgstr "La bourse"
+
+#: app1/templates/app1/studentsinfo.html:30
+msgid ""
+"يحصل كل طالب مسجل في إطار التعاون الرسمي بين موريتانيا والمغرب على منحة من "
+"الوكالة المغربية للتعاون الدولي. يتم الحصول على المنحة الموريتانية عن طريق:"
+msgstr ""
+"Chaque étudiant inscrit dans le cadre de la coopération officielle entre la "
+"Mauritanie et le Maroc bénéficie d'une bourse de l'Agence marocaine de "
+"coopération internationale. L'obtention de la bourse mauritanienne se fait "
+"par :"
+
+#: app1/templates/app1/studentsinfo.html:32
+msgid ""
+" التوجيه في الدورة الأولى للجنة الوطنية للمنح للمتفوقين في مرحلتي الباكلوريا "
+"والليصانص. "
+msgstr ""
+"Orientation lors de la première session de la Commission nationale des "
+"bourses pour les excellents en Bachelor et en Licence."
+
+#: app1/templates/app1/studentsinfo.html:33
+msgid ""
+"الحصول على منحة في الدورة الثانية للجنة الوطنية للمنح وفق مقتضيات المقرر رقم "
+"0424 الصادر بتاريخ 18 إبريل 2017، المحدد لطرق إسناد منح الطلاب الموريتانيين."
+msgstr ""
+"Obtention d'une bourse lors de la deuxième session de la Commission "
+"nationale des bourses conformément aux dispositions de l'arrêté n°0424 du 18 "
+"avril 2017, qui fixe les modalités d'attribution des bourses aux étudiants "
+"mauritaniens."
+
+#: app1/templates/app1/studentsinfo.html:35
+msgid ""
+"تصرف الملحقية الثقافية المنح خلال كل فصل دراسي بعد صدور قرار المنح الذي "
+"يتضمن أسماء المعنيين بالمنحة خلال الفصل الدراسي موضوع القرار، وبعد التوصل "
+"بالتحويلات المالية التي تغطى منح مجموع الطلاب المشمولين بالقرار المذكور."
+msgstr ""
+"La mission culturelle distribue les bourses chaque semestre après la "
+"publication de la décision de bourse incluant les noms des bénéficiaires "
+"pendant le semestre objet de la décision, et après réception des transferts "
+"financiers couvrant les bourses de l'ensemble des étudiants concernés par "
+"ladite décision."
+
+#: app1/templates/app1/studentsinfo.html:37
+msgid ""
+" تستقبل الملحقية الثقافية بالسفارة التظلمات من الطلاب الممنوحين الذين لم "
+"تظهر أسماؤهم على قرار المنح وتحيلها إلى وزارة التعليم العالي والبحث العلمي "
+"في موريتانيا وتتابعها حتى تتم تسوية وضعياتهم. "
+msgstr ""
+"L'attaché culturel de l'ambassade reçoit les réclamations des étudiants "
+"boursiers dont les noms ne figurent pas sur la décision de bourse et les "
+"transmet au ministère de l'Enseignement supérieur et de la Recherche "
+"scientifique en Mauritanie pour le suivi jusqu'à la résolution de leurs "
+"situations."
+
+#: app1/templates/app1/studentsinfo.html:38
+msgid ""
+"تستقبل الملحقية الثقافية ملفات طالبي المنح وتوجهها إلى وزارة التعليم العالي "
+"والبحث العلمي في موريتانيا بهدف عرضها على الدورة الثانية للجنة الوطنية للمنح."
+msgstr ""
+"L'attaché culturel reçoit les dossiers des demandeurs de bourses et les "
+"transmet au ministère de l'Enseignement supérieur et de la Recherche "
+"scientifique en Mauritanie en vue de les présenter lors de la deuxième "
+"session de la Commission nationale des bourses."
+
+#: app1/templates/app1/studentsinfo.html:41
+msgid " ويتكون ملف طلب المنحة في الدورة الثانية للمنح من: "
+msgstr ""
+" Et le dossier de demande de bourse pour la deuxième session de la "
+"Commission des bourses comprend : "
+
+#: app1/templates/app1/studentsinfo.html:43
+msgid " طلب خطي موجه إلى وزير التعليم العالي والبحث العلمي. "
+msgstr ""
+" Une demande manuscrite adressée au ministre de l'Enseignement supérieur et "
+"de la Recherche scientifique. "
+
+#: app1/templates/app1/studentsinfo.html:44
+msgid "شهادة تسجيل خاصة بالسنة الجامعية التي يطلب خلالها الطالب المنحة."
+msgstr ""
+"Certificat d'inscription pour l'année universitaire au cours de laquelle "
+"l'étudiant demande la bourse."
+
+#: app1/templates/app1/studentsinfo.html:45
+msgid "صورة مصدقة من الشهادات التي حصل عليها المعني (باكلوريا فما فوق)."
+msgstr ""
+"Copie authentifiée des certificats obtenus par le demandeur (Baccalauréat et "
+"au-delà)."
+
+#: app1/templates/app1/studentsinfo.html:48
+msgid "تستقبل الملحقية ملفات تجديد المنح سنويا وتتشكل من الوثائق التالية:"
+msgstr ""
+"L'attaché culturel reçoit les dossiers de renouvellement des bourses chaque "
+"année et ils comprennent les documents suivants :"
+
+#: app1/templates/app1/studentsinfo.html:50
+msgid "شهادة التسجيل بالنسبة للطلبة الجدد."
+msgstr "Certificat d'inscription pour les nouveaux étudiants."
+
+#: app1/templates/app1/studentsinfo.html:51
+msgid "أما بالنسبة للطلاب القدماء فإن عليهم الإدلاء بـ:"
+msgstr "Quant aux étudiants anciens, ils doivent fournir :"
+
+# ##################################
+#: app1/templates/app1/studentsinfo.html:53
+msgid "شهادة تسجيل مصدقة من الجهات المختصة."
+msgstr "Certificat d'inscription authentifié des autorités compétentes."
+
+#: app1/templates/app1/studentsinfo.html:54
+msgid "كشوف درجات السنة المنقضية."
+msgstr "Bulletins de notes de l'année précédente."
+
+#: app1/templates/app1/studentsinfo.html:59
+msgid ""
+"يمكن للطلاب الذين لم يتمكنوا من استكمال تكوينهم خلال الفترة المحددة لكل سلك "
+"في الآجال المحددة، التقدم بطلب تمديد المنحة مشفوعا بشهادة تسجيل تخص السنة "
+"الجامعية التي يتقدم فيها بالطلب المذكور، وإفادة من رئيس المؤسسة التي يدرس "
+"فيها تحدد الفترة الزمنية التي ينتظر أن ينهي فيها تكوينه (استدراك- تاريخ نقاش "
+"رسالة أو أطروحة)."
+msgstr ""
+"Les étudiants qui n'ont pas pu terminer leur formation dans le délai fixé "
+"pour chaque filière dans les délais prescrits peuvent demander une "
+"prolongation de la bourse accompagnée d'un certificat d'inscription pour "
+"l'année universitaire à laquelle la demande est présentée, et d'une "
+"attestation du chef de l'établissement où il étudie, indiquant la période "
+"pendant laquelle il prévoit de terminer sa formation (rattrapage - date de "
+"la défense d'une thèse ou d'un mémoire)."
+
+#: app1/templates/app1/studentsinfo.html:61
+msgid ""
+"يتعين على الطلاب سحب منحهم عند الإعلان عن توزيعها وإلا ستعيدها الملحقية "
+"الثقافية قبل نهاية السنة المالية للخزينة العامة للدولة وفقا لما يجري به "
+"العمل وفي هذه الحالة فإن الملحقية الثقافية ليست مسؤولة عن استردادها."
+msgstr ""
+"Les étudiants doivent retirer leur bourse lors de son annonce, sinon "
+"l'attaché culturel retournera la bourse avant la fin de l'exercice financier "
+"à la Trésorerie générale de l'État conformément aux procédures en vigueur, "
+"et dans ce cas, l'attaché culturel n'est pas responsable de la récupération."
+
+#: app1/templates/app1/studentsinfo.html:64
+msgid "التأشيرات"
+msgstr "Visas"
+
+#: app1/templates/app1/studentsinfo.html:66
+msgid ""
+"تتولى مصالح التأشيرة بالقنصلية، إصدار تأشيرات الدخول البيومترية إلى "
+"موريتانيا، ويتم ذلك حصرا عبر إتباع المسطرة التالية:"
+msgstr ""
+"Les services de visa du consulat délivrent des visas biométriques pour "
+"entrer en Mauritanie, exclusivement en suivant la procédure suivante :"
+
+#: app1/templates/app1/studentsinfo.html:69
+msgid ""
+"التقدم مباشرة لدى القنصلية (مكتب الاستقبال)، مصحوبين بملف التأشيرة المكون من:"
+msgstr ""
+"Présentez-vous directement au consulat (au bureau de réception) accompagné "
+"du dossier de visa, composé de :"
+
+#: app1/templates/app1/studentsinfo.html:71
+msgid "نسختين من جواز السفر لا تقل صلاحيته عن ستة أشهر على الأقل."
+msgstr ""
+"Deux copies du passeport, la validité ne doit pas être inférieure à six mois."
+
+#: app1/templates/app1/studentsinfo.html:72
+msgid "صورتين شمسيتين."
+msgstr "Deux photos d'identité."
+
+#: app1/templates/app1/studentsinfo.html:73
+msgid "تعبئة الاستمارة الموجودة لدى مركز التأشيرة."
+msgstr "Remplir le formulaire disponible au centre des visas."
+
+#: app1/templates/app1/studentsinfo.html:74
+msgid "مبرر الزيارة (دعوة للزيارة، عقد عمل، تجمع عائلي، حجز فندقي)."
+msgstr ""
+"Justification de la visite (invitation, contrat de travail, réunion "
+"familiale, réservation d'hôtel)."
+
+#: app1/templates/app1/studentsinfo.html:75
+msgid ""
+"دفع رسوم التأشيرة الموضحة في الجدول المرفق، في الحساب البنكي للقنصلية رقم "
+"123456789000000000، وذلك بعد الحصول على إذن مسبق بالدفع من مكتب التأشيرات:"
+msgstr ""
+"Paiement des frais de visa indiqués dans le tableau ci-joint, sur le compte "
+"bancaire du consulat numéro 123456789000000000, après avoir obtenu une "
+"autorisation de paiement du bureau des visas :"
+
+#: app1/templates/app1/studentsinfo.html:80
+msgid "جدول رسوم التأشيرة"
+msgstr "Tableau des frais de visa"
+
+#: app1/templates/app1/studentsinfo.html:145
+msgid ""
+"تتم معالجة الطلبات وإصدار التأشيرة - في الظروف العادية- خلال 24 إلى 48 ساعة "
+"من تاريخ التقديم."
+msgstr ""
+"Le traitement des demandes et la délivrance des visas - dans des "
+"circonstances normales - se font dans un délai de 24 à 48 heures à compter "
+"de la date de la demande."
+
+#~ msgid "المؤهلات التعليمية"
+#~ msgstr "Qualifications académiques"
+
+#~ msgid ""
+#~ "ماجستير في العلوم السياسية - جامعة محمد الخامس، الرباط، المغرب (2015-2017)"
+#~ msgstr ""
+#~ "Master en sciences politiques - Université Mohammed V, Rabat, Maroc "
+#~ "(2015-2017)"
+
+#~ msgid "بكالوريوس في العلاقات الدولية - جامعة نواكشوط، موريتانيا (2011-2015)"
+#~ msgstr ""
+#~ "Licence en relations internationales - Université de Nouakchott, "
+#~ "Mauritanie (2011-2015)"
+
+#~ msgid "الخبرات المهنية"
+#~ msgstr "Expérience professionnelle"
+
+#~ msgid "القنصل العام لموريتانيا بالدار البيضاء، المغرب (2022-الآن)"
+#~ msgstr "Consul général de Mauritanie à Casablanca, Maroc (2022-à présent)"
+
+#~ msgid "المستشار السياسي في السفارة الموريتانية بباريس، فرنسا (2017-2022)"
+#~ msgstr ""
+#~ "Conseiller politique à l'ambassade de Mauritanie à Paris, France "
+#~ "(2017-2022)"
+
+#~ msgid ""
+#~ "باحث في مركز الدراسات السياسية والاستراتيجية في نواكشوط، موريتانيا "
+#~ "(2015-2017)"
+#~ msgstr ""
+#~ "Chercheur au Centre d'études politiques et stratégiques de Nouakchott, "
+#~ "Mauritanie (2015-2017)"
+
+#~ msgid "المهارات"
+#~ msgstr "Compétences"
+
+#~ msgid "المهارات اللغوية"
+#~ msgstr "Compétences linguistiques"
+
+#~ msgid "العربية (اللغة الأم)"
+#~ msgstr "Arabe (langue maternelle)"
+
+#~ msgid "الفرنسية (بطلاقة)"
+#~ msgstr "Français (courant)"
+
+#~ msgid "الإنجليزية (جيد)"
+#~ msgstr "Anglais (bon)"
+
+#~ msgid "المهارات التقنية"
+#~ msgstr "Compétences techniques"
+
+#~ msgid "إجادة استخدام برامج Microsoft Office"
+#~ msgstr "Maîtrise de l'utilisation des logiciels Microsoft Office"
+
+#~ msgid "إجادة استخدام الإنترنت"
+#~ msgstr "Maîtrise de l'utilisation d'Internet"
+
+#~ msgid "إجادة استخدام برامج الترجمة الآلية"
+#~ msgstr "Maîtrise de l'utilisation des logiciels de traduction automatique"
+
+#~ msgid "المهارات الشخصية"
+#~ msgstr "Compétences personnelles"
+
+#~ msgid "القدرة على العمل تحت الضغط"
+#~ msgstr "Capacité à travailler sous pression"
+
+#~ msgid "القدرة على العمل الجماعي"
+#~ msgstr "Capacité à travailler en équipe"
+
+#~ msgid "القدرة على التواصل الفعال"
+#~ msgstr "Capacité de communication efficace"
+
+#~ msgid "الأهداف المهنية"
+#~ msgstr "Objectifs professionnels"
+
+#~ msgid ""
+#~ "العمل في مجال الدبلوماسية والعلاقات الدولية، المساهمة في تعزيز العلاقات "
+#~ "بين موريتانيا ودول العالم، إحداث تأثير إيجابي على المجتمع."
+#~ msgstr ""
+#~ "Travailler dans le domaine de la diplomatie et des relations "
+#~ "internationales, contribuer à renforcer les liens entre la Mauritanie et "
+#~ "les pays du monde, et avoir un impact positif sur la société."
+
+#~ msgid ""
+#~ "طلب عائلة المتوفى، إفادة وفاة موقعة من الطبيب الذي عاين المتوفي، جواز سفر "
+#~ "المتوفى ومرافقه"
+#~ msgstr ""
+#~ "Demande de la famille du défunt, certificat de décès signé par le médecin "
+#~ "qui a examiné le défunt, passeport du défunt et de son accompagnateur"
+
+#~ msgid "Description"
+#~ msgstr "Description"
+
+msgid " أكمل القراءة "
+msgstr " أكمل القراءة "

@@ -1,0 +1,186 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-26 19:09+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: minister_ext/settings.py:152 templates/base.html:382
+msgid "French"
+msgstr "Français"
+
+#: minister_ext/settings.py:153 templates/base.html:384
+msgid "Arabic"
+msgstr "Arabe"
+
+#: templates/base.html:276 templates/base.html:300
+msgid "القنصلية العامة لموريتانيا بالدار البيضاء"
+msgstr "Consulat Général de la République Islamique de Mauritanie à Casablanca"
+
+#: templates/base.html:312
+msgid "Home"
+msgstr "Accueil"
+
+#: templates/base.html:325
+msgid "Consulate"
+msgstr "Consulat"
+
+#: templates/base.html:328 templates/base.html:567
+msgid "كلمة ترحيب"
+msgstr "mot de bienvenue"
+
+#: templates/base.html:329
+msgid "السيرة الذاتية للقنصل العام"
+msgstr "Curriculum Vitae du Consul Général"
+
+#: templates/base.html:330
+msgid "طاقم القنصلية "
+msgstr "le personnel du consulat"
+
+#: templates/base.html:340
+msgid "Services"
+msgstr "Services"
+
+#: templates/base.html:343
+msgid "الوثائق والمعاملات القنصلية للمواطنين"
+msgstr "Les documents et transactions consulaires pour les citoyens"
+
+#: templates/base.html:344
+msgid "الحالة المدنية"
+msgstr "l'état civil"
+
+#: templates/base.html:345
+msgid "الشؤون الاجتماعية و خدمات للأجانب"
+msgstr "Affaires sociales et services aux étrangers"
+
+#: templates/base.html:346
+msgid "شؤون الطلاب"
+msgstr "Affaires étudiantes"
+
+#: templates/base.html:351
+msgid "تواصل معنا"
+msgstr "Contactez le consulat"
+
+#: templates/base.html:376
+msgid "languages"
+msgstr "Langues"
+
+#: templates/base.html:551
+msgid "القنصل العام :"
+msgstr "Heures normales :"
+
+#: templates/base.html:551
+msgid "الطالب المختار الشيخ محمد المجتبى"
+msgstr ""
+
+#: templates/base.html:568
+msgid "السيرة الذاتية"
+msgstr "Curriculum Vitae (CV)"
+
+#: templates/base.html:579
+msgid "التواصل مع القنصلية"
+msgstr "Contactez le consulat"
+
+#: templates/base.html:586
+msgid ": العنوان "
+msgstr ": L'adresse "
+
+#: templates/base.html:587
+msgid "زنقة ..................."
+msgstr "Rue ..................."
+
+#: templates/base.html:594
+msgid "هاتف :"
+msgstr "Téléphone :"
+
+#: templates/base.html:608
+msgid "البريد الالكتروني : "
+msgstr "Email : "
+
+#: templates/base.html:620
+msgid "أوقات الدوام"
+msgstr "Heures de travail"
+
+#: templates/base.html:625
+msgid "الدوام العادي :"
+msgstr "Heures normales :"
+
+#: templates/base.html:626
+msgid ""
+"من التاسعة والنصف صباحا حتى الرابعة والنصف مساء باستثناء يوم الجمعة من "
+"الثامنة حتى الثانية عشر"
+msgstr ""
+"De neuf heures et demie à seize heures et demie, sauf le vendredi de huit "
+"heures à midi"
+
+#: templates/base.html:629
+msgid "الدوام في شهر رمضان :"
+msgstr "Heures de travail pendant le mois de Ramadan :"
+
+#: templates/base.html:630
+msgid "من التاسعة والنصف حتى الثالثة ."
+msgstr "De neuf heures et demie à quinze heures."
+
+#: templates/base.html:672 templates/base.html:675
+msgid "مواقع مهمة"
+msgstr "Sites importants"
+
+#: templates/base.html:679
+msgid "وزارة الشؤون الخارجية والتعاون"
+msgstr "Ministère des Affaires étrangères et de la Coopération"
+
+#: templates/base.html:685
+msgid "الوكالة الموريتانية  للأنباء"
+msgstr "Agence mauritanienne d'information"
+
+#: templates/base.html:692
+msgid "البوابة بالموريتانية للتنمية "
+msgstr "Portail de développement en Mauritanie"
+
+#: templates/base.html:707
+msgid ""
+"© 2023 Embassy of the Islamic Republic of Mauritania in Morocco. All rights "
+"reserved."
+msgstr ""
+"© 2023 Consulat Général de la République Islamique de Mauritanie à Casablanca. Tous droits réservés."
+
+#~ msgid "Announcements"
+#~ msgstr "Annonces"
+
+msgid "جاري تحديث الصفحة"
+msgstr "La page est en cours de mise à jour."
+
+msgid " أكمل القراءة "
+msgstr "Lire la suite"
+
+msgid "الشؤون الاجتماعية" 
+msgstr "affaires sociales" 
+
+msgid "خدمات للأجانب"
+msgstr "services étrangers"
+
+
+msgid "Internal Server Error"
+msgstr "Erreur interne du serveur."
+
+msgid "Back to Home"
+msgstr "Retour à la page d'accueil."
+
+msgid "Page Not Found"
+msgstr "Page non trouvée."
+
+msgid "Agence de Promotion des Investissements en Mauritanie"
+msgstr "Agence de Promotion des Investissements en Mauritanie"

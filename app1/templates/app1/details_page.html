@@ -1,0 +1,37 @@
+{% extends 'base.html'%}
+{%load static %}
+{% comment %} {% load i18n %}
+
+{%get_current_language as LANGUAGE_CODE%} {% endcomment %}
+
+
+{% block content %}
+
+
+<div class="card col-lg-12 text-justify" >
+{% comment %} text-right" > {% endcomment %}
+    {% if poste.video_url == "" %}
+        <img class="card-img-top" src="{{ poste.image_url }}" height="500" alt="Card image cap">
+    {% else %}
+        <div class="card-img-top">
+            <div class="embed-responsive embed-responsive-16by9">
+                <!-- Replace the YouTube video URL in the src attribute -->
+                <iframe class="embed-responsive-item" src="{{ poste.video_url }}" allowfullscreen></iframe>
+            </div>
+        </div>
+    {% endif %}
+    <div class="card-body">
+      <h4 class="card-title text-center ">{{poste.title}}</h4>
+      <p class="card-text">{{ poste.content | safe }}</p>
+      <div class='col'>
+        <span>{{poste.author}}</span>
+        <span>{{poste.published_date}}</span>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load i18n %}
+
+{%get_current_language as LANGUAGE_CODE%}
+
+
+{% block content %}
+
+
+<div class="col">
+    <br>
+    <br>
+    <div class="col text-justify">
+       
+        <h2 class="text-center">{% trans "خدمات للأجانب(زيارة موريتانيا، التأشيرات)" %}</h2>
+        <br>
+        <p class="{%if LANGUAGE_CODE == 'ar' %} text-right {% endif%} text-left ">
+            {% trans "يتم تقديم طلبات الإقامة لدى مصالح الشرطة المختصة ويتكون الملف عادة من:" %}
+        </p>
+        <ul class="{%if LANGUAGE_CODE == 'ar' %} text-right {% endif%} text-left">
+            <li>{% trans "جواز السفر وتأشيرة الدخول (بالنسبة للطلاب يجب ان يحصلوا على تأشيرة طالب من السفارة أو القنصلية المغربية مسبقا)" %}</li>
+            <li>{% trans "عقد إيجار(يحدد عنوان السكن) أو إفادة ملكية في حالة الملكية، أو إفادة سكن في حي جامعي بالنسبة للطلاب" %}</li>
+            <li>{% trans "إفادة منحة بالنسبة للطلاب الممنوحين" %}</li>
+            <li>{% trans "إفادة تكفل بالنسبة للطلاب غير الممنوحين" %}</li>
+            <li>{% trans "تسجيل قنصلي" %}</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

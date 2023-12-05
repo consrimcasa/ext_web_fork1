@@ -1,0 +1,68 @@
+{% extends 'base.html'%}
+{%load static %}
+{% load i18n %}
+{% comment %} {% load i18n %}
+
+{%get_current_language as LANGUAGE_CODE%} {% endcomment %}
+
+
+{% block content %}
+
+<br>
+
+<!--start contacter -->
+<div class="pb-3">
+    <div class="bg-light py-2 px-4 mb-3">
+        <h3 class="m-0  {%if LANGUAGE_CODE == 'ar' %} text-right {% endif%} text-left"> {% trans "التواصل مع القنصلية" %} </h3>
+    </div>
+    <div class="bg-light text-center p-4 mb-3">
+        <ul class="list-group">
+            {% comment %} <a href="https://www.diplomatie.gov.mr/"> {% endcomment %}
+                <li class="list-group-item d-flex justify-content-between align-items-center  text-justify">
+                    {% trans ": العنوان " %}
+                    <span> {% trans "زنقة ..................." %} </span>
+                </li>
+            {% comment %} </a> {% endcomment %}
+            {% comment %} <a href="http://www.ami.mr/"> {% endcomment %}
+                <li class="list-group-item d-flex justify-content-between align-items-center text-justify">
+                    {% trans "هاتف :" %}
+                    {%if LANGUAGE_CODE == 'ar' %}
+                        <span> 24242525 222+ </span>
+                    {% else%} 
+                        <span> +222 24242525 </span>
+                    {% endif %}
+                    
+                
+                </li>
+            {% comment %} </a> {% endcomment %}
+            {% comment %} <a href="http://www.pmd.mr/pages/ar/"> {% endcomment %}
+                <li class="list-group-item d-flex justify-content-between align-items-center text-justify">
+                    {% trans "البريد الالكتروني : " %}   
+                    <span>exemple2023@gmail.com</span>
+                </li>
+            {% comment %} </a> {% endcomment %}
+        </ul>
+    </div>
+</div>
+<!-- end contacter -->
+ <!--start work -->
+ <div class="pb-3">
+    <div class="bg-light py-2 px-4 mb-3">
+        <h3 class="m-0  {%if LANGUAGE_CODE == 'ar' %} text-right {% endif%} text-left"> {% trans "أوقات الدوام" %} </h3>
+    </div>
+    <div class="bg-light text-justify p-4 mb-3">
+        <ul class="list-group">
+                <li class="list-group-item d-flex justify-content-between align-items-center ">
+                 <h6 class="col-5"> {% trans "الدوام العادي :" %} </h6> 
+                    <p> {% trans "من التاسعة والنصف صباحا حتى الرابعة والنصف مساء باستثناء يوم الجمعة من الثامنة حتى الثانية عشر" %} </p>
+                </li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <h6 class="col-5"> {% trans "الدوام في شهر رمضان :" %} </h6>
+                    <p> {% trans "من التاسعة والنصف حتى الثالثة ." %} </p>
+                
+                </li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

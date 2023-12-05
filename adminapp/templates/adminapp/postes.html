@@ -1,0 +1,70 @@
+{% extends 'base_admin.html'%}
+{% block content %}
+
+<div class="content mt-3">
+
+    <div class="col-sm-12" >
+        <div class="col-11 alert  alert-success " role="alert">
+            <h3> Manage Your  <span class="badge badge-pill badge-success">   Postes </span> <h3>
+            {% comment %} <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button> {% endcomment %}
+        </div>
+        <div class="col-1  alert  alert-success">
+            <a class="add-btn btn  btn-outline-success" role="button" data-url="#", href="{% url 'adminapp:newPost' %}">
+                <i class="fa  fa-plus" ></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="col-sm-12 col-lg-12">
+
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Content</th>
+                <th>Author</th>
+                <th>Published date</th>
+                {% comment %} <th>Action</th> {% endcomment %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for poste in postes %}
+            <tr>
+                <td>Tiger Nixon</td>
+                <td>{{ poste.title}}</td>
+                <td>{{ poste.title}}</td>
+                {% comment %} <td>{{ poste.content}}</td> {% endcomment %}
+                <td>{{ poste.content|safe }}</td>
+                <td>{{ poste.author}}</td>
+                <td>{{ poste.published_date}}</td>
+                <th>
+                    {% comment %} <a class="update-btn btn btn-outline-success"  role="button" href="{% url 'adminapp:update_user' user.id %}" >
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="delete-btn btn btn-outline-danger" role="button" onclick="return confirm('Are you sure you want to delete this user ?') ;"  href="{% url 'adminapp:delete_user' user.id %}">
+                        <i class="fa fa-trash-o"></i>
+                    </a> {% endcomment %}
+                </th>
+            </tr>
+            {% endfor %}
+            
+           
+        </tbody>
+        {% comment %} <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot> {% endcomment %}
+    </table>
+</div>
+{% endblock%}

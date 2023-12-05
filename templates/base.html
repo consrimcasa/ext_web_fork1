@@ -1,0 +1,815 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+
+{%get_current_language as LANGUAGE_CODE%}
+{%if LANGUAGE_CODE == 'ar' %}
+<html dir='rtl'>
+{% else%}
+<html dir='ltr'>
+{% endif%} 
+{% comment %} <html dir='rtl'> {% endcomment %}
+
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulat Général de la République Islamique de Mauritanie à Casablanca</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Include Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+     <style>
+         /* Adjustments for the slider */
+         #news-carousel {
+             max-width: 800px; /* Adjust the maximum width as needed */
+             margin: auto;
+         }
+ 
+         /* Add more styling as needed */
+     </style>
+    <style>
+        
+        .header-top {
+            background-color: #00A95C;
+            {% comment %} #007B5E; /* Adjusted color to match the image */ {% endcomment %}
+            color: white;
+            padding: 0rem;
+            text-align: center;
+        }
+        .navbar-custom, .custom-navbar {
+            background-color: #8C0000; /* Adjusted color to match the image */
+        }
+        .navbar-custom .navbar-nav .nav-link, 
+        .custom-navbar .navbar-nav .nav-link,
+        .custom-navbar .navbar-brand {
+            color: white;
+        }
+        .custom-navbar .nav-item.active .nav-link,
+        .custom-navbar .nav-item:hover .nav-link {
+            background-color: #C60F13; /* Slightly Lighter Red for Active/Hover */
+            
+        }
+        .navbar-custom .nav-item {
+            margin: 0 15px; /* Spacing between nav items */
+        }
+        .navbar-custom .navbar-collapse, 
+        .navbar-expand-custom {
+            flex-grow: 0; /* Prevent the navbar from taking the full width */
+            justify-content: start;
+        }
+        .custom-search {
+            position: relative;
+        }
+        .custom-search input {
+            border-radius: 0;
+        }
+        .custom-search button {
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border: none;
+            background: none;
+            color: #495057;
+        }
+        #languageSelector {
+            position: absolute;
+            right: 10px; /* Align the language selector to the right */
+            top: 10px;
+        }
+        .fixed-sidebar {
+            position: sticky;
+            top: 5.5rem; /* Adjusted to be below the navbar */
+            height: calc(100vh - 5.5rem);
+            overflow-y: auto;
+        }
+        .main-content, .content-dynamic {
+            padding: 1rem;
+        }
+        .footer-custom {
+            background-color: #00A95C; /* Adjusted color to match the image */
+            color: white;
+            padding: 1rem 0;
+            margin-top: 1rem;
+        }
+        /* RTL layout for Arabic */
+        .rtl {
+            direction: rtl;
+        }
+        .rtl .navbar-nav {
+            direction: ltr;
+        }
+        /* Adjustments for fixed sidebar and dynamic content layout */
+        @media (min-width: 992px) {
+            .content-dynamic {
+                margin-left: 300px; /* Sidebar width */
+            }
+        }
+    </style>
+  
+    <style>
+        body {
+            margin:0;
+            text-align:justify;
+        }
+        
+        .icon-bar {
+          width: 100%;
+          {% comment %} background-color: #555; {% endcomment %}
+          overflow: auto;
+        }
+        
+        .icon-bar a {
+          
+          {%if LANGUAGE_CODE == 'ar' %} float: right; {%else %} float: left; {%endif %}
+          width: 16.6%;
+          text-align: center;
+          padding: 12px 0;
+          transition: all 0.3s ease;
+          color: white;
+          font-size: 16px;
+        }
+
+        .wl{
+          width: 80%;
+          text-align: center;
+          transition: all 0.3s ease;
+          color: #FFD700;
+          font-size: 32px;
+          {% comment %} background-color: #555; {% endcomment %}
+        }
+        
+        .icon-bar a:hover {
+          background-color: #FFD700;
+        }
+        
+        .active {
+          background-color: #FFD700;
+        }
+        .content {
+            background-color: #fff;
+            border: none;
+        }
+        
+        .content.edit-mode {
+            background-color: #fff0;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <style>
+        /* Apply the background image to the header */
+        .header-t {
+            {% comment %} background-image: url({% static 'bg.jpg'%}); /* Replace 'path/to/your/image.jpg' with the actual path to your image */ {% endcomment %}
+            background-size: cover; /* Cover the entire header with the background image */
+            background-position: center; /* Center the background image */
+            color: white; /* Set text color to white for better visibility */
+            {%if LANGUAGE_CODE == 'ar' %} text-align:left; {% endif%} text-align:right; /* Center-align text */
+            padding: 40px; /* Adjust padding as needed */
+            {% comment %} padding: 50px; {% endcomment %}
+            height: 180px; 
+        }
+
+        /* Add other styles as needed */
+
+         /* Media query to hide header on screens up to 768px wide (adjust as needed) */
+        @media (max-width: 768px) {
+            .header-t {
+                display: none; /* Hide the header on smaller screens */
+            }
+        }
+
+
+        @font-face {
+            {%if LANGUAGE_CODE == 'ar' %} 
+                font-family: 'Louguiya';
+                src: url("{% static 'custom_police/Louguiya.ttf' %}") format('truetype');
+                /* Add other formats if needed, such as woff, woff2, etc. */
+            {% else %} 
+                font-family: 'Louguiya';
+                src: url("{% static 'custom_police/LouguiyaFR.ttf' %}") format('truetype');
+                /* Add other formats if needed, such as woff, woff2, etc. */
+            {% endif %}
+        }
+          
+        @font-face {
+            {%if LANGUAGE_CODE == 'ar' %} 
+                font-family: 'Louguiya Bold';
+                src: url("{% static 'custom_police/Louguiya Bold.ttf' %}") format('truetype');
+                /* Add other formats if needed, such as woff, woff2, etc. */
+            {% else %} 
+                font-family: 'Louguiya Bold';
+                src: url("{% static 'custom_police/LouguiyaFR Bold.ttf' %}") format('truetype');
+                /* Add other formats if needed, such as woff, woff2, etc. */
+            {% endif %}
+           
+        }
+
+        body {
+            font-family: 'Louguiya', sans-serif;
+        }
+          
+        h1,h2,h3,h4,h5,h6 {
+            font-family: 'Louguiya Bold', sans-serif;
+        }
+        .it-p {
+            
+            
+            {%if LANGUAGE_CODE == 'ar' %} padding-left: 100px; /* Adjust the left padding */ {%else %} padding-right: 100px; /* Adjust the right padding */ {%endif %}
+        }
+        
+        {% comment %} .navbar {
+            padding-left: 120px; /* Adjust the left padding */
+            padding-right: 120px; /* Adjust the right padding */
+        }
+
+        
+        /* Arabic language specific styles */
+        body[dir='rtl'] .navbar {
+            padding-left: 0;
+            padding-right: 120px;
+        }
+
+        body[dir='rtl'] .it-p {
+            padding-left: 0;
+            padding-right: 20px;
+        }
+           {% endcomment %}
+
+    </style>
+    
+
+   
+</head>
+<body >
+
+    {% comment %} <h1 style="font-family: 'Louguiya Bold', sans-serif;">Bold Heading Text</h1>
+<p style="font-family: 'Louguiya', sans-serif;">Regular Paragraph Text</p> {% endcomment %}
+
+    <div class="header-top header-t" 
+        <div class="container">
+
+            <div class="container">
+                <div class="row">
+                  <div class="col-2 align-self-start">
+                    <img src="{% static 'logo.png' %}" alt="Embassy Logo" height="110"> 
+                  </div>
+                  <div class="col-8 align-self-center text-justify">
+                    
+                        {%if LANGUAGE_CODE == 'ar' %}
+                        <h1> {% trans "القنصلية العامة لموريتانيا بالدار البيضاء" %} </h1>
+                        {%else%}
+                        <h3> {% trans "القنصلية العامة لموريتانيا بالدار البيضاء" %} </h3>
+                        {%endif%}
+                  </div>
+                </div>
+                   <!-- Navigation Bar -->
+                <br>
+    
+            </div>
+        </div>
+    </div>
+    <div style="background-color: #00A95C;">
+        <div class="row" >
+            <div class="col-lg-2">
+                <!-- Content for the left side (2 columns) -->
+            </div>
+            <div class="col-lg-8" style="background-color: #D01C1F; padding-top:6px;padding-left:2px;padding-right:2px;">
+                <div>
+                    <nav class="navbar navbar-expand-lg  navbar-light bg-secondary " >
+                        {% comment %} <a class="navbar-brand" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button> {% endcomment %}
+                        <!-- Logo and Text visible on Mobile -->
+                        <a class="navbar-brand d-lg-none" href="#">
+                            <img src="{% static 'logo.png' %}" alt="Embassy Logo" height="30">
+                            {% trans "القنصلية العامة لموريتانيا بالدار البيضاء" %}
+                        </a>
+                        
+                        <!-- Navbar Toggle Button for Small Screens -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    
+                        <div class="collapse navbar-collapse" style="display: flex; justify-content: center; align-items: center;" id="navbarSupportedContent">
+                            <ul class="navbar-nav text-justify text-white">
+                                <!-- Home -->
+                                <li class="nav-item it-p ">
+                                    <a class="nav-link text-white" href="{% url 'app1:home' %}" >{% trans "Home" %}</a>
+                                </li>
+                    
+                                {% comment %} <!-- Announcements -->
+                                <li class="nav-item it-p ">
+                                    <a class="nav-link text-white" href="{% url 'app1:announcements' %}" >{% trans "Announcements" %}</a>
+                                </li> {% endcomment %}
+                    
+                                
+                                <!-- Consulate with Submenu -->
+                                <li class="nav-item it-p  dropdown">
+                                    <a class="nav-link text-white dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        {% trans "Consulate" %}
+                                    </a>
+                                    <div class="dropdown-menu text-justify" aria-labelledby="servicesDropdown">
+                                        <a class="dropdown-item" href="{% url 'app1:bienvenu' %}"> {% trans "القنصل العام" %} </a>
+                                        <a class="dropdown-item" href="{% url 'app1:consulate' %}"> {% trans "طاقم القنصلية "%}</a>
+                                        <a class="dropdown-item" href="{% url 'app1:fonctions_du_consulat' %}"> {% trans "مهام القنصلية:" %}</a>
+                                        {% comment %} <a class="dropdown-item" href="#"> {% trans "responsabilites "%}</a> {% endcomment %}
+                                        <!-- Add more submenu items as needed -->
+                                    </div>
+                                </li>
+                    
+                                <!-- Services with Submenu -->
+                                <li class="nav-item it-p  dropdown">
+                                    <a class="nav-link text-white dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        {% trans "Services" %}
+                                    </a>
+                                    <div class="dropdown-menu text-justify" aria-labelledby="servicesDropdown">
+                                        <a class="dropdown-item" href="{% url 'app1:documents_citoyens' %}">{% trans "الوثائق والمعاملات القنصلية للمواطنين" %} </a>
+                                        <a class="dropdown-item" href="{% url 'app1:etat_civil' %}">{% trans "الحالة المدنية" %} </a>
+                                        <a class="dropdown-item" href="{% url 'app1:affaires_sociales' %}">{% trans "الشؤون الاجتماعية" %} </a>
+                                        <a class="dropdown-item" href="{% url 'app1:services_etrangers' %}">{% trans "خدمات للأجانب" %} </a>
+                                        <a class="dropdown-item" href="{% url 'app1:studentsInfo' %}"> {% trans "شؤون الطلاب" %} </a>
+                                        <a class="dropdown-item" href="{% url 'app1:visas' %}"> {% trans "التأشيرات" %} </a>
+                                        <!-- Add more submenu items as needed -->
+                                    </div>
+                                </li>
+                                <li class="nav-item it-p ">
+                                    <a class="nav-link text-white" href="{% url 'app1:contact' %}"> {% trans "تواصل معنا" %}</a>
+                                </li>
+                    
+                                <!-- Students Info with Submenu -->
+                                {% comment %} <li class="nav-item it-p  dropdown">
+                                    <a class="nav-link text-white dropdown-toggle" href="#" id="studentsInfoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        {% trans "شؤون الطلاب" %}
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="studentsInfoDropdown">
+                                        <a class="dropdown-item" href="">Submenu Item 1</a>
+                                        <a class="dropdown-item" href="#">Submenu Item 2</a>
+                                        <!-- Add more submenu items as needed -->
+                                    </div>
+                                </li>
+                            </ul> {% endcomment %}
+                
+                            {% comment %} <a class="nav-item nav-link d-none d-lg-inline-block" href="{% url 'app1:services' %}" >{% trans "Services" %}</a>
+                            <a class="nav-item nav-link d-none d-lg-inline-block" href="{% url 'app1:studentsInfo' %}" > {% trans "شؤون الطلاب" %} </a> {% endcomment %}
+                        
+                        <!-- Languages Dropdown -->
+                        <div class="dropdown">
+                            <a href="#" class="btn btn-transparent text-secondary dropdown-hover p-0" data-toggle="dropdown">
+                                <i class="fas fa-globe wl"></i>
+                                <span class="d-lg-none">{% trans "languages"%}</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right vl-dropdown m-0 {% if LANGUAGE_CODE == 'ar' %} text-right {% endif %} text-left">
+                                {% for language in languages %}
+                                    <a class="dropdown-item border-bottom msg-unread" href="javascript:void(0);" onclick="changeLanguage('{{ language.code }}')">
+                                        {% if language.name_local == "français" %}
+                                            <i class="flag-icon">🇫🇷</i><span class="text-center">{% trans "French" %}</span>
+                                        {% else %}
+                                            <i class="flag-icon">🇲🇷</i><span class="text-center">{% trans "Arabic" %}</span>
+                                        {% endif %}
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <!-- Content for the right side (2 columns) -->
+            </div>
+        </div>
+    </div>
+
+   
+     {% comment %} <nav class="navbar  navbar-expand-lg navbar-dark bg-dark justify-content-justify">
+        <!-- Logo and Text visible on Mobile -->
+        <a class="navbar-brand d-lg-none" href="#">
+            <img src="{% static 'logo.png' %}" alt="Embassy Logo" height="30">
+            {% trans "القنصلية العامة لموريتانيا بالدار البيضاء" %}
+        </a>
+    
+        <!-- Navbar Toggle Button for Small Screens -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <!-- Navbar Items -->
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <!-- Home -->
+                <li class="nav-item it-p ">
+                    <a class="nav-link" href="{% url 'app1:home' %}" >{% trans "Home" %}</a>
+                </li>
+    
+                <!-- Announcements -->
+                <li class="nav-item it-p ">
+                    <a class="nav-link" href="{% url 'app1:announcements' %}" >{% trans "Announcements" %}</a>
+                </li>
+    
+                <!-- Consulate -->
+                <li class="nav-item it-p ">
+                    <a class="nav-link" href="{% url 'app1:consulate' %}" >{% trans "Consulate" %}</a>
+                </li>
+    
+                <!-- Services with Submenu -->
+                <li class="nav-item it-p  dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {% trans "Services" %}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                        <a class="dropdown-item" href="#">Service 1</a>
+                        <a class="dropdown-item" href="#">Service 2</a>
+                        <!-- Add more submenu items as needed -->
+                    </div>
+                </li>
+    
+                <!-- Students Info with Submenu -->
+                <li class="nav-item it-p  dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="studentsInfoDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {% trans "شؤون الطلاب" %}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="studentsInfoDropdown">
+                        <a class="dropdown-item" href="#">Submenu Item 1</a>
+                        <a class="dropdown-item" href="#">Submenu Item 2</a>
+                        <!-- Add more submenu items as needed -->
+                    </div>
+                </li>
+            </ul>
+    
+            <!-- Languages Dropdown -->
+            <div class="dropdown">
+                <a href="#" class="btn btn-transparent text-secondary dropdown-hover p-0" data-toggle="dropdown">
+                    <i class="fas fa-globe wl"></i>
+                    <span class="d-lg-none">{% trans "languages"%}</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right vl-dropdown m-0 {% if LANGUAGE_CODE == 'ar' %} text-right {% endif %} text-left">
+                    {% for language in languages %}
+                        <a class="dropdown-item border-bottom msg-unread" href="javascript:void(0);" onclick="changeLanguage('{{ language.code }}')">
+                            {% if language.name_local == "français" %}
+                                <i class="flag-icon">🇫🇷</i><span class="text-center">{% trans "French" %}</span>
+                            {% else %}
+                                <i class="flag-icon">🇲🇷</i><span class="text-center">{% trans "Arabic" %}</span>
+                            {% endif %}
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </nav> {% endcomment %}
+    
+           
+                
+    <!-- News With Sidebar Start -->
+    <div class="container-fluid py-3">
+        <div class=" container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+                    {% block content%}
+
+                    {% endblock content%}
+                </div>
+                
+                <div class="col-lg-4 pt-3 pt-lg-0">
+                    <!-- Social Follow Start -->
+                    <div class="pb-3">
+                        {% comment %} <div class="d-flex mb-3">
+                            <a href=""><img class="img-fluid w-100" src="{% static 'rim_drp.jpg'%}" alt=""></a>
+                        </div> {% endcomment %}
+                        <div class="card col-lg-12 text-justify" >
+                            {% comment %} {%if LANGUAGE_CODE == 'ar' %} text-right {% endif%} text-left" > {% endcomment %}
+                               {% comment %} <img class="card-img-top" src="{% static 'cn.jpg' %}" height="500" alt="Card image cap"> {% endcomment %}
+                               <!-- Image Slider Container -->
+                               {% comment %} <div id="imageSlider" class="carousel slide" data-ride="carousel" data-interval="1000"> <!-- Set data-interval to the desired interval in milliseconds (e.g., 2000 for 2 seconds) -->
+                                   <div class="carousel-inner scroll-container">
+                                   <div class="carousel-item active">
+                                       <img class=" w-100" src="{% static 'cn.jpg' %}" alt="Cinque Terre">
+                                   </div>
+                                   <div class="carousel-item">
+                                       <img class=" w-100" src="{% static 'cn.jpg' %}" alt="Forest">
+                                   </div>
+                                   <div class="carousel-item">
+                                       <img class="w-100" src="{% static 'cn.jpg' %}" alt="Northern Lights">
+                                   </div>
+                                   <div class="carousel-item">
+                                       <img class=" w-100" src="{% static 'cn.jpg' %}" alt="Mountains">
+                                   </div>
+                                   </div>
+                               </div> {% endcomment %}
+                               {% comment %} <div class="container mt-100">
+                                   <div class="row">
+                                     <div class="col-md-8 mr-auto ml-auto">
+                                       
+                                        
+                                      
+                                     </div>
+                                   </div>
+                               </div> {% endcomment %}
+                               <div class="card card-raised card-carousel">
+                                    <div id="carouselindicators" class="carousel slide" data-ride="carousel" data-interval="3000">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselindicators" data-slide-to="0" class=""></li>
+                                        <li data-target="#carouselindicators" data-slide-to="1" class="active"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active carousel-item-left">
+                                        <img class="d-block w-100 " src="{% static 'rim_drp.jpg' %}" height=435 alt="First slide">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            {% comment %} <h4>
+                                            <i class="fa fa-map-marker"></i>
+                                            Dharamshala,Himachal Pradesh, India
+                                            </h4> {% endcomment %}
+                                        </div>
+                                        </div>
+                                        <div class="carousel-item carousel-item-next carousel-item-left">
+                                            <img class="d-block w-100" src="{% static 'cn.jpg' %}" alt="Second slide">
+                                            <div class="carousel-caption d-none d-md-block">
+                                                <h4>
+                                                <i class="fa fa-map-marker"></i>
+                                                <span>{% trans "القنصل العام :" %} {% trans "الطالب المختار الشيخ محمد المجتبى" %}</span>
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <a class="carousel-control-prev" href="#carouselindicators" role="button" data-slide="prev" data-abc="true">
+                                        <i class="fa fa-chevron-left"></i>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselindicators" role="button" data-slide="next" data-abc="true">
+                                        <i class="fa fa-chevron-right"></i>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                    </div>
+                                </div>
+                               <div class="card-body">
+                                 <a class="nav-link btn btn-success" href="{% url 'app1:bienvenu' %}"<h4 class="card-title text-center ">{% trans "كلمة ترحيب" %}</h4></a>
+                                 <a class="nav-link btn btn-success" href="{% url 'app1:cv' %}"<h4 class="card-title text-center ">{% trans "السيرة الذاتية" %}</h4></a>
+                                 {% comment %} <p class="card-text">
+                                   {% trans "في إطار مهمتها العامة المتمثلة في حماية ورعاية مصالح المواطنين الموريتانيين المقيمين بالمملكة المغربية أو العابرين لها، وحرصا على التواصل مع هؤلاء المواطنين وتقريب الخدمات منهم، تجسيدا للإرادة السامية لفخامة رئيس الجمهورية السيد محمد ولد الشيخ الغزواني بربط الصلة بالجالية الوطنية في الخارج وجعلها على في صلب الرعاية والاهتمام ، ومن أجل د تفاعل أكثر سرعة وانسيابا مع تطلعات هؤلاء المواطنين ،جاء قرار افتتاح القنصلية العامة للجمهورية الإسلامية الموريتانية بالدار البيضاء لتشكل أداة لخدمة أفراد جاليتنا بالمملكة المغرية الشقيقة ، وإنه ليسعدنا في القنصلية أن نضع رهن إشارة أفراد جاليتنا هذا الموقع الألكتروني ليشكل منصة للتفاعل وتوفير المعلومات المهمة لهم ، آملين أن يجدو فيه ما يحتاجونه من معلومات وتوجيهات تسهل حصولهم على الخدمات وتبسط الإجراءان ، دون أن يكون بديلا عن تواصلهم المباشر مع القنصلية التي ستكون بكافة مصالحها وطواقمها رهن إشارتهم وتحت تصرفهم." %}
+                                 </p>
+                                 <span>{% trans "القنصل العام :" %} {% trans "الطالب المختار الشيخ محمد المجتبى" %}</span> {% endcomment %}
+                               </div>
+                           </div>
+                        <!--start contacter -->
+                        <div class="pb-3">
+                            <div class="bg-light py-2 px-4 mb-3">
+                                <h3 class="m-0  {%if LANGUAGE_CODE == 'ar' %} text-right {% endif%} text-left"> {% trans "التواصل مع القنصلية" %} </h3>
+                            </div>
+                            <div class="bg-light text-center p-4 mb-3">
+                                <ul class="list-group">
+                                    {% comment %} <a href="https://www.diplomatie.gov.mr/"> {% endcomment %}
+                                        <li class="list-group-item d-flex justify-content-between align-items-center ">
+                                            {% trans ": العنوان " %}
+                                            <span> {% trans "زنقة ..................." %} </span>
+                                        </li>
+                                    {% comment %} </a> {% endcomment %}
+                                    {% comment %} <a href="http://www.ami.mr/"> {% endcomment %}
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            {% trans "هاتف :" %}
+                                            {%if LANGUAGE_CODE == 'ar' %}
+                                                <span> 24242525 222+ </span>
+                                            {% else%} 
+                                                <span> +222 24242525 </span>
+                                            {% endif %}
+                                            
+                                        
+                                        </li>
+                                    {% comment %} </a> {% endcomment %}
+                                    {% comment %} <a href="http://www.pmd.mr/pages/ar/"> {% endcomment %}
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            {% trans "البريد الالكتروني : " %}   
+                                            <span>exemple2023@gmail.com</span>
+                                        </li>
+                                    {% comment %} </a> {% endcomment %}
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end contacter -->
+                         <!--start work -->
+                         <div class="pb-3">
+                            <div class="bg-light py-2 px-4 mb-3">
+                                <h3 class="m-0  {%if LANGUAGE_CODE == 'ar' %} text-right {% endif%} text-left"> {% trans "أوقات الدوام" %} </h3>
+                            </div>
+                            <div class="bg-light text-center p-4 mb-3">
+                                <ul class="list-group">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center ">
+                                         <h6 class="col-5"> {% trans "الدوام العادي :" %} </h6> 
+                                            <p> {% trans "من التاسعة والنصف صباحا حتى الرابعة والنصف مساء باستثناء يوم الجمعة من الثامنة حتى الثانية عشر" %} </p>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <h6 class="col-5"> {% trans "الدوام في شهر رمضان :" %} </h6>
+                                            <p> {% trans "من التاسعة والنصف حتى الثالثة ." %} </p>
+                                        
+                                        </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end work -->
+                        {% comment %} <div class="bg-light py-2 px-4 mb-3">
+                            <h3 class="m-0">Follow Us</h3>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <a href="" class="d-block w-50 py-2 px-3 text-white text-decoration-none mr-2" style="background: #39569E;">
+                                <small class="fab fa-facebook-f mr-2"></small><small>12,345 Fans</small>
+                            </a>
+                            <a href="" class="d-block w-50 py-2 px-3 text-white text-decoration-none ml-2" style="background: #52AAF4;">
+                                <small class="fab fa-twitter mr-2"></small><small>12,345 Followers</small>
+                            </a>
+                        </div>
+                        
+                        <div class="d-flex mb-3">
+                            <a href="" class="d-block w-50 py-2 px-3 text-white text-decoration-none mr-2" style="background: #0185AE;">
+                                <small class="fab fa-linkedin-in mr-2"></small><small>12,345 Connects</small>
+                            </a>
+                            <a href="" class="d-block w-50 py-2 px-3 text-white text-decoration-none ml-2" style="background: #C8359D;">
+                                <small class="fab fa-instagram mr-2"></small><small>12,345 Followers</small>
+                            </a>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <a href="" class="d-block w-50 py-2 px-3 text-white text-decoration-none mr-2" style="background: #DC472E;">
+                                <small class="fab fa-youtube mr-2"></small><small>12,345 Subscribers</small>
+                            </a>
+                            <a href="" class="d-block w-50 py-2 px-3 text-white text-decoration-none ml-2" style="background: #1AB7EA;">
+                                <small class="fab fa-vimeo-v mr-2"></small><small>12,345 Followers</small>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Social Follow End --> {% endcomment %}
+
+                    <!-- Newsletter Start -->
+                    <div class="pb-3">
+                        <div class="bg-light py-2 px-4 mb-3">
+                            <h3 class="m-0  {%if LANGUAGE_CODE == 'ar' %} text-right {% endif%} text-left"> {% trans "مواقع مهمة" %} </h3>
+                        </div>
+                        <div class="bg-light text-center p-4 mb-3">
+                            <p>  {% trans "مواقع مهمة" %} </p>
+                            <ul class="list-group">
+                                <a href="https://www.diplomatie.gov.mr/">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        {% trans "وزارة الشؤون الخارجية والتعاون" %}
+                                        <span><img src=" {% static 'logo.png'%} " width="40" height="40" alt="" border="0"></span>
+                                    </li>
+                                </a>
+                                <a href="http://www.ami.mr/">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        {% trans "الوكالة الموريتانية  للأنباء" %}
+                                        <span><img src=" {% static 'NKC.gif'%} " class="isyng-image lazyloaded b-loaded"
+                                             width="160" height="40" alt="نواكشــوط عاصـمة الثقافة الاسلامية"  border="0"></span>
+                                    </li>
+                                </a>
+                                <a href="http://www.pmd.mr/pages/ar/">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        {% trans "البوابة بالموريتانية للتنمية " %}  
+                                        <span><img src=" {% static 'logo.png'%} " width="40" height="40" alt="" border="0"></span>
+                                    </li>
+                                </a>
+                                <a href="https://apim.gov.mr/">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        {% trans "Agence de Promotion des Investissements en Mauritanie" %}  
+                                        <span><img src=" https://apim.gov.mr/wp-content/uploads/2022/04/logo-APIM-mobile.png " width="40" height="40" alt="" border="0"></span>
+                                    </li>
+                                </a>
+                                <a href="https://www.commerce.gov.mr/">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        {% trans "" %}  
+                                        <span><img src="https://apim.gov.mr/wp-content/uploads/2022/04/logo-APIM-mobile.png" width="40" height="40" alt="" border="0"></span>
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Newsletter End -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-custom text-center">
+        <div id="map" style="height: 200px;"></div>
+        <p>{% trans "© 2023 Embassy of the Islamic Republic of Mauritania in Morocco. All rights reserved." %}</p>
+    </footer>
+    {% comment %} <script>
+        // Your translations object and switchLanguage function remain the same.
+    
+        function switchLanguage(language) {
+            // Set the 'lang' attribute of the html tag to the selected language
+            document.documentElement.setAttribute('lang', language);
+            
+            // Update text content based on the selected language
+            document.querySelectorAll("[data-translate]").forEach(el => {
+                let key = el.getAttribute("data-translate");
+                if (translations[language][key]) {
+                    el.textContent = translations[language][key];
+                }
+            });
+        
+            // Toggle the 'dir' attribute for RTL or LTR based on the language
+            const direction = language === 'ar' ? 'rtl' : 'ltr';
+            document.documentElement.setAttribute('dir', direction);
+        
+            // Align the language selector to the left for RTL languages, and to the right for LTR languages
+            const languageSelector = document.getElementById('languageSelector');
+            if (language === 'ar') {
+                languageSelector.style.left = '10px';
+                languageSelector.style.right = '';
+            } else {
+                languageSelector.style.right = '10px';
+                languageSelector.style.left = '';
+            }
+        
+            // If needed, toggle a class for RTL layout adjustments
+            document.body.classList.toggle('rtl', language === 'ar');
+        }
+        
+    
+        // Set default language on page load
+        switchLanguage('en'); // You can change 'en' to your preferred default language.
+    </script> {% endcomment %}
+    <script>
+        function changeLanguage(langCode) {
+            // Get the current URL
+            var currentURL = window.location.href;
+            
+            // Replace the language code in the URL with the selected language code
+            var newURL = currentURL.replace(/\/[a-z]{2}\//, '/' + langCode + '/');
+            
+            // Navigate to the new language-specific URL
+            window.location.href = newURL;
+
+            
+        }
+    </script>
+    {% comment %} 
+  <script>
+    tinymce.init({
+      selector: '#editor'
+    });
+
+    var content = tinymce.activeEditor.getContent({ format: 'text' });
+    document.getElementById('content').innerHTML = content;
+  </script> {% endcomment %}
+  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+  <script>
+      const editButton = document.getElementById('edit-button');
+      const contentDiv = document.getElementById('content');
+      const editor = tinymce.init({
+          selector: '#editor',
+          setup: (editor) => {
+              editor.on('change', () => {
+                  contentDiv.innerHTML = editor.getContent({ format: 'text' });
+              });
+          }
+      });
+
+      editButton.addEventListener('click', () => {
+          if (editButton.textContent === 'Edit') {
+              editButton.textContent = 'Save';
+              contentDiv.style.display = 'none';
+              editor.setContent(contentDiv.textContent);
+              editor.getElement().style.display = 'block';
+          } else {
+              editButton.textContent = 'Edit';
+              contentDiv.style.display = 'block';
+              editor.getElement().style.display = 'none';
+          }
+      });
+  </script>
+  <!-- Bootstrap JS and Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <!-- Leaflet JavaScript -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- Initialize the Map -->
+    <script>
+    var map = L.map('map').setView([33.585671, -7.626843], 13);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker([33.585671, -7.626843]).addTo(map)
+        .bindPopup( '{% trans "القنصلية العامة لموريتانيا بالدار البيضاء" %}')     
+        .openPopup();
+    </script>
+    
+   
+</body>
+</html>

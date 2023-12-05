@@ -1,0 +1,97 @@
+{% extends 'base.html'%}
+
+
+{% block content %}
+<div class="col-md-8 main-content-area">
+  {% comment %} <div class="row"> {% endcomment %}
+    <h1>Fiche d'Immatriculation</h1>
+    <br>
+    
+    <form id="registrationForm">
+    
+      <!-- A - IDENTITÉ ET FILIATION: -->
+      <div class="form-group">
+        <label for="lastName">Nom (Surname):</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <!-- ... All other fields ... -->
+      </div>
+    
+      <!-- B - NAISSANCE: -->
+      <div class="form-group">
+        <label for="birthDate">Date de Naissance (Date of Birth):</label>
+        <input type="date" id="birthDate" name="birthDate" required>
+        <!-- ... All other fields ... -->
+      </div>
+    
+      <!-- C - PIÈCES D'IDENTITÉ MAROCAINES: -->
+      <div class="form-group">
+        <h6>PIÈCES D'IDENTITÉ MAROCAINES</h6>
+        <!-- ... All fields for this section ... -->
+      </div>
+    
+      <!-- D - STATUT AU PAYS D'ACCUEIL: -->
+      <div class="form-group">
+        <h6>STATUT AU PAYS D'ACCUEIL </h6>
+        <!-- ... All fields for this section ... -->
+      </div>
+    
+      <!-- E - COORDONNEES: -->
+      <div class="form-group">
+        <h6>COORDONNEES </h6>
+        <!-- ... All fields for this section ... -->
+      </div>
+    
+      <!-- F - CONTACTS: -->
+      <div class="form-group">
+        <h6>CONTACTS </h6>
+        <!-- ... All fields for this section ... -->
+      </div>
+    
+      <!-- G - CONJOINT(E): -->
+      <div class="form-group">
+        <h6>CONJOINT(E) </h6>
+        <!-- ... All fields for this section ... -->
+      </div>
+    
+      <!-- H - NIVEAU D’ETUDES: -->
+      <div class="form-group">
+        <h6>NIVEAU D’ETUDES </h6>
+        <!-- ... All fields for this section ... -->
+      </div>
+    
+      <!-- I - PROFESSION ACTUELLE: -->
+      <div class="form-group">
+        <h6>PROFESSION ACTUELLE </h6>
+        <!-- ... All fields for this section ... -->
+      </div>
+    
+      <!-- J - SI ETUDIANT (E) (PRECISER): -->
+      <div class="form-group">
+        <h6>SI ETUDIANT (E) (PRECISER) </h6>
+        <!-- ... All fields for this section ... -->
+      </div>
+    
+      <!-- Photo Upload -->
+      <div class="form-group">
+        <label for="photoUpload">Photo:</label>
+        <input type="file" id="photoUpload" name="photo" accept="image/*">
+      </div>
+    
+      <!-- Signature Pad -->
+      <div class="form-group">
+        <label>Signature du demandeur:</label>
+        <div class="signature-pad" id="signature-pad"></div>
+        <!-- You'll need to integrate a signature pad library here -->
+      </div>
+    
+      <!-- Submit Button -->
+      <input type="submit" value="Submit">
+    
+    </form>
+  {% comment %} </div> {% endcomment %}
+</div>
+
+
+
+
+{% endblock %}

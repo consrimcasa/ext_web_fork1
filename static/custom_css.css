@@ -1,0 +1,11 @@
+/* For LTR languages, the sidebar might be positioned on the left */
+.ltr-side-nav {
+    left: 0;
+    right: auto;
+}
+
+/* For RTL languages, the sidebar might be positioned on the right */
+.rtl-side-nav {
+    right: 0;
+    left: auto;
+}

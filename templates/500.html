@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% load i18n %}
+
+{% block content %}
+
+<div class="bg-light d-flex align-items-center justify-content-center" style="height: 100vh;">
+    <div class="text-center">
+        <h1 class="display-1 text-danger">500</h1>
+        <p class="lead"> {% trans "Internal Server Error" %} </p>
+        <a href="/" class="btn btn-danger">{% trans "Back to Home" %}</a>
+    </div>
+
+</div>
+
+{% endblock%}

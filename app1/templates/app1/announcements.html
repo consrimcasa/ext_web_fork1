@@ -1,0 +1,57 @@
+{% extends 'base.html'%}
+{% load i18n %}
+{% comment %} {% load i18n %}
+
+
+{%get_current_language as LANGUAGE_CODE%} {% endcomment %}
+
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5 col-md-6">
+            <h1>{% trans "الاخبار"%}</h1>
+            <div class='row'>
+                {% for poste in postes%}
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="position-relative">
+                        <img class="img-fluid w-100" src="{{poste.image_url}}" style="object-fit: cover;">
+                        <div class="overlay position-relative bg-light">
+                            <div class="mb-2" style="font-size: 13px;">
+                                <a href="">{{poste.title}}</a>
+                                <span class="px-1">{{poste.author}}</span>
+                                <span>{{poste.published_date}}</span>
+                            </div>
+                            <a class="h4 m-0" href="{% url 'stock:details_page' poste.id %}">{{poste.description}}</a>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+
+        </div>
+        <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">
+            <h1>{% trans "الإعلانات" %}</h1>
+            <div class='row'>
+                {% for annonce in annonces%}
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="position-relative">
+                        <img class="img-fluid w-100" src="{{annonce.image_url}}" style="object-fit: cover;">
+                        <div class="overlay position-relative bg-light">
+                            <div class="mb-2" style="font-size: 13px;">
+                                <a href="">{{annonce.title}}</a>
+                                <span class="px-1">{{poste.author}}</span>
+                                <span>{{annonce.published_date}}</span>
+                            </div>
+                            <a class="h4 m-0" href="{% url 'stock:annoucement_details' annonce.id %}">{{annonce.description}}</a>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+
+        </div>
+      </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends 'base.html'%}
+{%load static %}
+{% load i18n %}
+{% comment %} {% load i18n %}
+
+{%get_current_language as LANGUAGE_CODE%} {% endcomment %}
+
+
+{% block content %}
+
+
+<div class="card col-lg-12 text-justify" >
+    {% comment %} {%if LANGUAGE_CODE == 'ar' %} text-right {% endif%} text-left" > {% endcomment %}
+       {% comment %} <img class="card-img-top" src="{% static 'cn.jpg' %}" height="500" alt="Card image cap"> {% endcomment %}
+       <!-- Image Slider Container -->
+       {% comment %} <div id="imageSlider" class="carousel slide" data-ride="carousel" data-interval="1000"> <!-- Set data-interval to the desired interval in milliseconds (e.g., 2000 for 2 seconds) -->
+           <div class="carousel-inner scroll-container">
+           <div class="carousel-item active">
+               <img class=" w-100" src="{% static 'cn.jpg' %}" alt="Cinque Terre">
+           </div>
+           <div class="carousel-item">
+               <img class=" w-100" src="{% static 'cn.jpg' %}" alt="Forest">
+           </div>
+           <div class="carousel-item">
+               <img class="w-100" src="{% static 'cn.jpg' %}" alt="Northern Lights">
+           </div>
+           <div class="carousel-item">
+               <img class=" w-100" src="{% static 'cn.jpg' %}" alt="Mountains">
+           </div>
+           </div>
+       </div> {% endcomment %}
+       <div class="container mt-100">
+            <img class="d-block w-100" src="{% static 'cn.jpg' %}" height="600" width="100" alt="Second slide">
+            {% comment %} <div class="carousel-caption">
+                <a class="nav-link btn btn-success" href="{% url 'app1:cv' %}"<h4 class="card-title text-center ">{% trans "السيرة الذاتية" %}</h4></a>
+                <a class="nav-link btn btn-success" href="{% url 'app1:bienvenu' %}"<h4 class="card-title text-center ">{% trans "كلمة ترحيب" %}</h4></a>
+            </div> {% endcomment %}
+       </div>
+       <div class="card-body">
+         <h4 class="card-title text-center ">{% trans "كلمة ترحيب" %}</h4>
+         <p class="card-text">
+           {% trans "في إطار مهمتها العامة المتمثلة في حماية ورعاية مصالح المواطنين الموريتانيين المقيمين بالمملكة المغربية أو العابرين لها، وحرصا على التواصل مع هؤلاء المواطنين وتقريب الخدمات منهم، تجسيدا للإرادة السامية لفخامة رئيس الجمهورية السيد محمد ولد الشيخ الغزواني بربط الصلة بالجالية الوطنية في الخارج وجعلها على في صلب الرعاية والاهتمام ، ومن أجل د تفاعل أكثر سرعة وانسيابا مع تطلعات هؤلاء المواطنين ،جاء قرار افتتاح القنصلية العامة للجمهورية الإسلامية الموريتانية بالدار البيضاء لتشكل أداة لخدمة أفراد جاليتنا بالمملكة المغرية الشقيقة ، وإنه ليسعدنا في القنصلية أن نضع رهن إشارة أفراد جاليتنا هذا الموقع الألكتروني ليشكل منصة للتفاعل وتوفير المعلومات المهمة لهم ، آملين أن يجدو فيه ما يحتاجونه من معلومات وتوجيهات تسهل حصولهم على الخدمات وتبسط الإجراءان ، دون أن يكون بديلا عن تواصلهم المباشر مع القنصلية التي ستكون بكافة مصالحها وطواقمها رهن إشارتهم وتحت تصرفهم." %}
+         </p>
+         <span>{% trans "القنصل العام :" %} {% trans "الطالب المختار الشيخ محمد المجتبى" %}</span>
+       </div>
+</div>
+<div class="card-body">
+    <a class="nav-link btn btn-success" href="{% url 'app1:bienvenu' %}"<h4 class="card-title text-center ">{% trans "كلمة ترحيب" %}</h4></a>
+    <a class="nav-link btn btn-success" href="{% url 'app1:cv' %}"<h4 class="card-title text-center ">{% trans "السيرة الذاتية" %}</h4></a>
+
+</div>
+    
+
+   {% comment %} <a class="dropdown-item" href="{% url 'app1:bienvenu' %}">{% trans "كلمة ترحيب"%} </a>
+    <a class="dropdown-item" href="{% url 'app1:cv' %}">{% trans "السيرة الذاتية للقنصل العام"%}</a> {% endcomment %}
+
+
+
+
+
+{% endblock %}

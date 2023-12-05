@@ -1,0 +1,97 @@
+{% extends 'base.html'%}
+{% load i18n %}
+
+{%get_current_language as LANGUAGE_CODE%}
+
+
+{% block content %}
+<br>
+<h1 class="text-center"> {% trans "التأشيرات" %} </h1>
+<br>
+<hr>
+
+<div class="container mt-4 {%if LANGUAGE_CODE == 'ar' %} text-right {% endif%} text-left">
+
+    <p> {% trans "تتولى مصالح التأشيرة بالقنصلية، إصدار تأشيرات الدخول البيومترية إلى موريتانيا، ويتم ذلك حصرا عبر إتباع المسطرة التالية:" %} </p>
+
+    <ul>
+      <li> {% trans "التقدم مباشرة لدى القنصلية (مكتب الاستقبال)، مصحوبين بملف التأشيرة المكون من:" %} </li>
+      <ul>
+        <li> {% trans "نسختين من جواز السفر لا تقل صلاحيته عن ستة أشهر على الأقل." %} </li>
+        <li> {% trans "صورتين شمسيتين." %} </li>
+        <li> {% trans "تعبئة الاستمارة الموجودة لدى مركز التأشيرة." %} </li>
+        <li> {% trans "مبرر الزيارة (دعوة للزيارة، عقد عمل، تجمع عائلي، حجز فندقي)." %} </li>
+        <li> {% trans "دفع رسوم التأشيرة الموضحة في الجدول المرفق، في الحساب البنكي للقنصلية رقم 123456789000000000، وذلك بعد الحصول على إذن مسبق بالدفع من مكتب التأشيرات:" %} </li>
+      </ul>
+    </ul>
+
+    <div class="container mt-4">
+        <h2 class="text-center"> {%trans "جدول رسوم التأشيرة" %} </h2>
+    
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th colspan="3" class="text-center">TAUX  A  APPLIQUER</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>367 DH</td>
+              <td>30 jours</td>
+              <th rowspan="6" class="mt-6 text-center" > MONDE ARABE ET AFRIQUE </th>
+            </tr>
+            <tr>
+              <td>611 DH</td>
+              <td>90 jours</td>
+            </tr>
+            <tr>
+              <td>1222 DH</td>
+              <td>de 3 mois à 1 an</td>
+            </tr>
+            <tr>
+              <td>1711 DH</td>
+              <td>de 1 à 2 ans</td>
+            </tr>
+            <tr>
+              <td>2444 DH</td>
+              <td>de 2 à 3 ans</td>
+            </tr>
+            <tr>
+              <td>4889 DH</td>
+              <td>de 3 ans et plus</td>
+            </tr>
+            <tr>
+              <td>489 DH</td>
+              <td>30 jours</td>
+              <th rowspan="6" class="mt-4 text-center" style="background:gray-600;"> RESTE DU MONDE </th>
+            </tr>
+            <tr>
+              <td>856 DH</td>
+              <td>90 jours</td>
+            </tr>
+            <tr>
+              <td>1711 DH</td>
+              <td>de 3 mois à 1 an</td>
+            </tr>
+            <tr>
+              <td>2444 DH</td>
+              <td>de 1 à 2 ans</td>
+            </tr>
+            <tr>
+              <td>3667 DH</td>
+              <td>de 2 à 3 ans</td>
+            </tr>
+            <tr>
+              <td>7333 DH</td>
+              <td>de 3 ans et plus</td>
+            </tr>
+          </tbody>
+        </table>
+    
+      </div>
+    
+
+    <p> {% trans "تتم معالجة الطلبات وإصدار التأشيرة - في الظروف العادية- خلال 24 إلى 48 ساعة من تاريخ التقديم." %} </p>
+  </div>
+
+{% endblock %}
