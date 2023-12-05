@@ -96,7 +96,7 @@ msgstr "Contactez le consulat"
 
 #: templates/base.html:586
 msgid ": العنوان "
-msgstr ": L'adresse "
+msgstr "L'adresse :"
 
 #: templates/base.html:587
 msgid "زنقة ..................."
@@ -161,7 +161,7 @@ msgstr ""
 #~ msgstr "Annonces"
 
 msgid "جاري تحديث الصفحة"
-msgstr "La page est en cours de mise à jour."
+msgstr "La page est en cours de mise à jour ..."
 
 msgid " أكمل القراءة "
 msgstr "Lire la suite"
@@ -184,3 +184,17 @@ msgstr "Page non trouvée."
 
 msgid "Agence de Promotion des Investissements en Mauritanie"
 msgstr "Agence de Promotion des Investissements en Mauritanie"
+
+msgid "Consulat Général de la République Islamique de Mauritanie à Casablanca"
+msgstr "Consulat Général de la République Islamique de Mauritanie à Casablanca"
+
+msgid "الإقامة بالمغرب"
+msgstr "Résidence au Maroc"
+
+
+msgid "وزارة الصناعة والصناعة التقليدية والسياحة"
+msgstr "Ministère de l'Industrie, de l'Artisanat et du Tourisme"
+
+
+msgid "مهام القنصليةlll" 
+msgstr "Fonctions consulaires"

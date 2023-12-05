@@ -162,3 +162,7 @@ def fonctions_du_consulat(request):
 def contact(request):
     context = {}
     return render(request,"app1/contact.html", context)
+
+def ResidenceauMaroc(request):
+    context = {}
+    return render(request, "app1/ResidenceauMaroc.html",context)

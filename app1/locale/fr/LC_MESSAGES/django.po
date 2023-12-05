@@ -240,7 +240,7 @@ msgid "محاسب"
 msgstr "Comptable"
 
 #: app1/templates/app1/consulate.html:52
-msgid "مهام القنصلية:"
+msgid "مهام القنصلية"
 msgstr "Fonctions du consulat"
 
 #: app1/templates/app1/cv.html:49 app1/templates/app1/home.html:20

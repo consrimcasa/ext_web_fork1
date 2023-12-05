@@ -17,6 +17,7 @@ urlpatterns=[
     path('visas/', views.visas, name='visas'),
     path('fonctions_du_consulat/', views.fonctions_du_consulat, name='fonctions_du_consulat'),
     path('contact/', views.contact, name='contact'),
+    path('ResidenceauMaroc/', views.ResidenceauMaroc, name="ResidenceauMaroc"),
     
     
     path('details_page/<str:post_id>', view=details_page, name='details_page'),

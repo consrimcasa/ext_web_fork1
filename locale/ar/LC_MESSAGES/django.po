@@ -65,7 +65,7 @@ msgstr ": العنوان "
 
 #: templates/base.html:337
 msgid "زنقة ..................."
-msgstr "زنقة ..................."
+msgstr "................... زنقة"
 
 #: templates/base.html:344
 msgid "هاتف :"
@@ -149,7 +149,7 @@ msgstr "الشؤون الاجتماعية و خدمات للأجانب"
 
 
 msgid "جاري تحديث الصفحة"
-msgstr "جاري تحديث الصفحة"
+msgstr "... جاري تحديث الصفحة"
 
 msgid " أكمل القراءة "
 msgstr " أكمل القراءة "
@@ -170,4 +170,16 @@ msgid "Page Not Found"
 msgstr "الصفحة غير موجودة"
 
 msgid "Agence de Promotion des Investissements en Mauritanie"
-msgstr "
+msgstr "وكالة ترقية الاستثمارات في موريتانيا"
+
+msgid "Consulat Général de la République Islamique de Mauritanie à Casablanca"
+msgstr "القنصلية العامة للجمهورية الاسلامية الموريتانية بالدار البيضاء"
+
+msgid "الإقامة بالمغرب"
+msgstr "الإقامة بالمغرب"
+
+msgid "وزارة الصناعة والصناعة التقليدية والسياحة"
+msgstr "وزارة الصناعة والصناعة التقليدية والسياحة"
+
+msgid "مهام القنصليةlll" 
+msgstr "مهام القنصلية" 

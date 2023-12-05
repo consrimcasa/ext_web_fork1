@@ -121,7 +121,7 @@ msgid "محاسب"
 msgstr "محاسب"
 
 #: app1/templates/app1/consulate.html:52
-msgid "مهام القنصلية:"
+msgid "مهام القنصلية"
 msgstr "مهام القنصلية"
 
 #: app1/templates/app1/home.html:12

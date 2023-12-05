@@ -17,7 +17,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulat Général de la République Islamique de Mauritanie à Casablanca</title>
+    <title>{% trans "Consulat Général de la République Islamique de Mauritanie à Casablanca" %}</title>
     <!-- Include Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Include Font Awesome for icons -->
@@ -323,7 +323,7 @@
                                     <div class="dropdown-menu text-justify" aria-labelledby="servicesDropdown">
                                         <a class="dropdown-item" href="{% url 'app1:bienvenu' %}"> {% trans "القنصل العام" %} </a>
                                         <a class="dropdown-item" href="{% url 'app1:consulate' %}"> {% trans "طاقم القنصلية "%}</a>
-                                        <a class="dropdown-item" href="{% url 'app1:fonctions_du_consulat' %}"> {% trans "مهام القنصلية:" %}</a>
+                                        <a class="dropdown-item" href="{% url 'app1:fonctions_du_consulat' %}"> {% trans "مهام القنصليةlll" %}</a>
                                         {% comment %} <a class="dropdown-item" href="#"> {% trans "responsabilites "%}</a> {% endcomment %}
                                         <!-- Add more submenu items as needed -->
                                     </div>
@@ -341,6 +341,7 @@
                                         <a class="dropdown-item" href="{% url 'app1:services_etrangers' %}">{% trans "خدمات للأجانب" %} </a>
                                         <a class="dropdown-item" href="{% url 'app1:studentsInfo' %}"> {% trans "شؤون الطلاب" %} </a>
                                         <a class="dropdown-item" href="{% url 'app1:visas' %}"> {% trans "التأشيرات" %} </a>
+                                        <a class="dropdown-item" href="{% url 'app1:ResidenceauMaroc' %}"> {% trans "الإقامة بالمغرب" %} </a>
                                         <!-- Add more submenu items as needed -->
                                     </div>
                                 </li>
@@ -552,14 +553,14 @@
                                     </a>
                                     </div>
                                 </div>
-                               <div class="card-body">
+                               {% comment %} <div class="card-body">
                                  <a class="nav-link btn btn-success" href="{% url 'app1:bienvenu' %}"<h4 class="card-title text-center ">{% trans "كلمة ترحيب" %}</h4></a>
-                                 <a class="nav-link btn btn-success" href="{% url 'app1:cv' %}"<h4 class="card-title text-center ">{% trans "السيرة الذاتية" %}</h4></a>
+                                 <a class="nav-link btn btn-success" href="{% url 'app1:cv' %}"<h4 class="card-title text-center ">{% trans "السيرة الذاتية" %}</h4></a> {% endcomment %}
                                  {% comment %} <p class="card-text">
                                    {% trans "في إطار مهمتها العامة المتمثلة في حماية ورعاية مصالح المواطنين الموريتانيين المقيمين بالمملكة المغربية أو العابرين لها، وحرصا على التواصل مع هؤلاء المواطنين وتقريب الخدمات منهم، تجسيدا للإرادة السامية لفخامة رئيس الجمهورية السيد محمد ولد الشيخ الغزواني بربط الصلة بالجالية الوطنية في الخارج وجعلها على في صلب الرعاية والاهتمام ، ومن أجل د تفاعل أكثر سرعة وانسيابا مع تطلعات هؤلاء المواطنين ،جاء قرار افتتاح القنصلية العامة للجمهورية الإسلامية الموريتانية بالدار البيضاء لتشكل أداة لخدمة أفراد جاليتنا بالمملكة المغرية الشقيقة ، وإنه ليسعدنا في القنصلية أن نضع رهن إشارة أفراد جاليتنا هذا الموقع الألكتروني ليشكل منصة للتفاعل وتوفير المعلومات المهمة لهم ، آملين أن يجدو فيه ما يحتاجونه من معلومات وتوجيهات تسهل حصولهم على الخدمات وتبسط الإجراءان ، دون أن يكون بديلا عن تواصلهم المباشر مع القنصلية التي ستكون بكافة مصالحها وطواقمها رهن إشارتهم وتحت تصرفهم." %}
                                  </p>
                                  <span>{% trans "القنصل العام :" %} {% trans "الطالب المختار الشيخ محمد المجتبى" %}</span> {% endcomment %}
-                               </div>
+                               {% comment %} </div> {% endcomment %}
                            </div>
                         <!--start contacter -->
                         <div class="pb-3">
@@ -656,33 +657,33 @@
                             <p>  {% trans "مواقع مهمة" %} </p>
                             <ul class="list-group">
                                 <a href="https://www.diplomatie.gov.mr/">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center text-justify">
                                         {% trans "وزارة الشؤون الخارجية والتعاون" %}
                                         <span><img src=" {% static 'logo.png'%} " width="40" height="40" alt="" border="0"></span>
                                     </li>
                                 </a>
                                 <a href="http://www.ami.mr/">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center text-justify">
                                         {% trans "الوكالة الموريتانية  للأنباء" %}
                                         <span><img src=" {% static 'NKC.gif'%} " class="isyng-image lazyloaded b-loaded"
                                              width="160" height="40" alt="نواكشــوط عاصـمة الثقافة الاسلامية"  border="0"></span>
                                     </li>
                                 </a>
                                 <a href="http://www.pmd.mr/pages/ar/">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center text-justify">
                                         {% trans "البوابة بالموريتانية للتنمية " %}  
                                         <span><img src=" {% static 'logo.png'%} " width="40" height="40" alt="" border="0"></span>
                                     </li>
                                 </a>
                                 <a href="https://apim.gov.mr/">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center text-justify">
                                         {% trans "Agence de Promotion des Investissements en Mauritanie" %}  
                                         <span><img src=" https://apim.gov.mr/wp-content/uploads/2022/04/logo-APIM-mobile.png " width="40" height="40" alt="" border="0"></span>
                                     </li>
                                 </a>
                                 <a href="https://www.commerce.gov.mr/">
-                                    <li class="list-group-item d-flex justify-content-between align-items-center">
-                                        {% trans "" %}  
+                                    <li class="list-group-item d-flex justify-content-between align-items-center text-justify">
+                                        {% trans "وزارة الصناعة والصناعة التقليدية والسياحة" %}  
                                         <span><img src="https://apim.gov.mr/wp-content/uploads/2022/04/logo-APIM-mobile.png" width="40" height="40" alt="" border="0"></span>
                                     </li>
                                 </a>
