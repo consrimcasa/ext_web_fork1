@@ -181,7 +181,7 @@ msgstr "Consul général :"
 #: app1/templates/app1/bienvenue.html:44 app1/templates/app1/consulate.html:22
 #: app1/templates/app1/home.html:18
 msgid "الطالب المختار الشيخ محمد المجتبى"
-msgstr "Thaleb El-Moukhtar Sheikh Mohamed Al-Mujtaba"
+msgstr "Taleb El-Moukhtar Sheikh Mohamed Al-Mujtaba"
 
 #: app1/templates/app1/consulate.html:11
 msgid "طاقم القنصلية"

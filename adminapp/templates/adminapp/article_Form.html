@@ -5,7 +5,7 @@
 <div class="container">
             <div class="col-sm-12">
                 <div class="alert  alert-success " role="alert">
-                    <h3> Create New  <span class="badge badge-pill badge-success">   Post </span> <h3>
+                    <h3> Gérez vos  <span class="badge badge-pill badge-success">   Publications </span> <h3>
                 </div>
             </div>        
             <div class="modal-body ">
@@ -14,11 +14,11 @@
                   {% csrf_token %}
                     <div class="form-row">
                       <div class="form-group col-md-6">
-                        <label for="title">Title</label>
+                        <label for="title">Titre</label>
                         <input type="text" class="form-control" id="title" name="title" placeholder="Tiltle">
                       </div>
                       <div class="form-group col-md-6">
-                        <label for="auther">Auther</label>
+                        <label for="auther">Auteur</label>
                         <input type="text" class="form-control" id="auther" name="author" placeholder="Author">
                       </div>
                     </div>
@@ -37,7 +37,7 @@
                       <textarea class="form-control" rows="3" id="description" name="description" placeholder="Description"></textarea>
                     </div>
                     <div class="form-group">
-                        <label for="content">Content</label>
+                        <label for="content">Contenu</label>
                         <textarea class="form-control" rows="30" id="content" name="content" placeholder="Content"></textarea>
                     </div>
                     {% comment %} <button type="submit" class="btn btn-primary"> Publier </button> {% endcomment %}

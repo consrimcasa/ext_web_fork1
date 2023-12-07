@@ -35,7 +35,42 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
+            {% for visa_info in visa_infos %}
+
+              <tr>
+                  <th rowspan="6" class="mt-6 text-center" > {{ visa_info.monde}} </th>
+                  <td>30 jours</td>
+                  <td> {{ visa_info.30_jours}}</td>
+                  
+              </tr>
+              <tr>
+                  <td>90 jours</td>
+                  <td> {{ visa_info.90_jours}} </td>
+                  
+              </tr>
+              <tr>
+                  <td>de 3 mois à 1 an</td>
+                  <td> {{ visa_info.de_3_mois_à_1_an}} </td>
+                  
+              </tr>
+              <tr>
+                  <td>de 1 à 2 ans</td>
+                  <td> {{ visa_info.de_1_à_2_ans}} </td>
+                
+              </tr>
+              <tr>
+                  <td>de 2 à 3 ans</td>
+                  <td> {{ visa_info.de_2_à_3_ans}} </td>
+                  
+              </tr>
+              <tr>
+                  <td>de 3 ans et plus</td>
+                  <td> {{ visa_info.de_3_ans_et_plus}} </td>
+                  
+              </tr>
+          
+            {% endfor %}
+            {% comment %} <tr>
               <td>367 DH</td>
               <td>30 jours</td>
               <th rowspan="6" class="mt-6 text-center" > MONDE ARABE ET AFRIQUE </th>
@@ -84,7 +119,7 @@
             <tr>
               <td>7333 DH</td>
               <td>de 3 ans et plus</td>
-            </tr>
+            </tr> {% endcomment %}
           </tbody>
         </table>
     

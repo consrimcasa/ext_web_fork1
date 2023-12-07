@@ -6,20 +6,32 @@ from django.shortcuts import render
 from django.shortcuts import render
 from firebase_admin import firestore
 
+consulate_contacts = {}
 # Create your views here.
+def get_consulate_contacts():
+    consulate_contacts = {}
+    docs = firestore.client().collection('consulate_contacts').stream()
+    for doc in docs:
+        consulate_contacts = doc.to_dict()
+        
+    print(f"consulate_contacts : {consulate_contacts}")
+    return consulate_contacts
+
 
 
 def cv(request):
-    return render(request, 'app1/cv.html', {})
+    return render(request, 'app1/cv.html', {'consulate_contacts':consulate_contacts})
 
 def bienvenu(request):
-    return render(request, 'app1/bienvenue.html', {})
+    return render(request, 'app1/bienvenue.html', {'consulate_contacts':consulate_contacts})
 
 def home(request):
+    global consulate_contacts
     # articles = Article.objects.all().order_by('-published_date')
     # context = {'articles': articles}
     postes = get_postes()
     annonces = get_annoncements()
+    consulate_contacts = get_consulate_contacts()
     
     # postes = []
     # annonces = []
@@ -27,6 +39,7 @@ def home(request):
     context = {
         'postes': postes,
         'annonces': annonces,
+        'consulate_contacts':consulate_contacts
     }
     
     return render(request, 'app1/home.html', context)
@@ -69,7 +82,8 @@ def details_page(request, post_id):
         print(f"poste : {poste['video_url']}")
     
     context = {
-        "poste": poste
+        "poste": poste,
+        'consulate_contacts':consulate_contacts
     }
     return render(request, 'app1/details_page.html', context)
 
@@ -80,32 +94,49 @@ def annoucement_details(request, annonce_id):
         print(f"annonce : {annonce['video_url']}")
     
     context = {
-        "annonce": annonce
+        "annonce": annonce,
+        'consulate_contacts':consulate_contacts
     }
     return render(request, 'app1/annoucement_details.html', context)
 
 def consulate(request):
-    context = {}
+    context = {'consulate_contacts':consulate_contacts}
     return render(request, 'app1/consulate.html', context)
 
 def services(request):
-    context = {}
+    context = {'consulate_contacts':consulate_contacts}
     return render(request, 'app1/services.html', context)
 
 def affaires_sociales(request):
-    context = {}
+    context = {'consulate_contacts':consulate_contacts}
     return render(request, 'app1/affaires_sociales.html', context)
 
 def services_etrangers(request):
-    context = {}
+    context = {'consulate_contacts':consulate_contacts}
     return render(request, 'app1/services_etrangers.html', context)
 
 def documents_citoyens(request):
-    context = {}
+    context = {'consulate_contacts':consulate_contacts}
     return render(request, 'app1/documents_citoyens.html', context)
 
+
+def get_etat_civils():
+    data = []
+    docs = firestore.client().collection('etat_civils').stream()
+    for doc in docs:
+        data.append(doc.to_dict())
+        
+    print(f"data : {data}")
+    return data
+
+
 def etat_civil(request):
-    context = {}
+    etat_civils = get_etat_civils()
+    
+    context = {
+        'consulate_contacts':consulate_contacts,
+        'etat_civils' : etat_civils
+    }
     return render(request, 'app1/etat_civil.html', context)
 
 
@@ -137,32 +168,48 @@ def announcements(request):
     context = {
         'postes': postes,
         'annonces': annonces,
+        'consulate_contacts':consulate_contacts
     }
     return render(request, 'app1/announcements.html', context)
 
 def gallery(request):
-    context = {}
+    context = {'consulate_contacts':consulate_contacts}
     return render(request, 'app1/gallery.html', context)
 def immatriculation(request):
-    context = {}
+    context = {'consulate_contacts':consulate_contacts}
     return render(request,"app1/immatriculation.html", context)
 
 def studentsInfo(request):
-    context = {}
+    context = {'consulate_contacts':consulate_contacts}
     return render(request,"app1/studentsinfo.html", context)
 
+
+def get_visa_infos():
+    data = []
+    docs = firestore.client().collection('visa_infos').stream()
+    for doc in docs:
+        data.append(doc.to_dict())
+        
+    print(f"data : {data}")
+    return data
+
+
 def visas(request):
-    context = {}
+    visa_infos = get_visa_infos()
+    context = {
+        'consulate_contacts':consulate_contacts,
+        'visa_infos': visa_infos,
+    }
     return render(request,"app1/visas.html",context)
 
 def fonctions_du_consulat(request):
-    context = {}
+    context = {'consulate_contacts':consulate_contacts}
     return render(request,"app1/fonctions_du_consulat.html", context)
 
 def contact(request):
-    context = {}
+    context = {'consulate_contacts':consulate_contacts}
     return render(request,"app1/contact.html", context)
 
 def ResidenceauMaroc(request):
-    context = {}
+    context = {'consulate_contacts':consulate_contacts}
     return render(request, "app1/ResidenceauMaroc.html",context)

@@ -37,7 +37,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+                {% for etat_civil in etat_civils %}
+                    <tr>
+                        <td>{{ etat_civil.frais}} </td>
+                        <td>{% trans etat_civil.type_de_demande %}</td>
+                    </tr>
+                {% endfor %}
+              {% comment %} <tr>
                   <td>{% trans "841  " %}</td>
                   <td>{% trans "الطلب الأول لجواز السفر العادي" %}</td>
               </tr>
@@ -100,7 +106,7 @@
               <tr>
                   <td>{% trans "5.5  " %}</td>
                   <td>{% trans "الحصول على مستخرجات الحالة المدنية" %}</td>
-              </tr>
+              </tr> {% endcomment %}
           </tbody>
           
         </table>

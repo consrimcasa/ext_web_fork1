@@ -11,7 +11,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sufee Admin - HTML5 Admin Template</title>
+    <title>Consulat Général de la République Islamique de Mauritanie à Casablanca</title>
     <meta name="description" content="Sufee Admin - HTML5 Admin Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -92,20 +92,33 @@
                
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="{% url 'adminapp:index' %}"> <i class="menu-icon fa fa-dashboard"></i>Dashboard </a>
+                        <a href="{% url 'adminapp:index' %}"> <i class="menu-icon fa fa-dashboard"></i>Tableau de bord </a>
                         
                     </li>
                     {% comment %} <li class="active">
                         <a href="{% url 'adminapp:annonces' %}"> <i class="menu-icon fa  fa-paste"></i>Annonces </a>
                     </li> {% endcomment %}
                     <li class="active">
-                        <a href="{% url 'adminapp:postes' %}"> <i class="menu-icon fa  fa-list-alt"></i>Postes </a>
+                        <a href="{% url 'adminapp:postes' %}"> <i class="menu-icon fa  fa-list-alt"></i> Nouvelles </a>
                         {% comment %} <a href="index.html"> <i class="bi bi-view-list"></i> Postes </a> {% endcomment %}
                     </li>
                     <li class="active">
-                        <a href="{% url 'adminapp:users' %}"> <i class="menu-icon fa fa-users"></i>Users </a> 
+                        <a href="{% url 'adminapp:users' %}"> <i class="menu-icon fa fa-users"></i> Utilisateurs </a> 
                         {% comment %} <a href="index.html"> <i class="bi bi-person-square"></i> Users </a> {% endcomment %}
                     </li>
+                    <li class="active">
+                        <a href="{% url 'adminapp:consulate_contacts' %}"> <i class="menu-icon fa fa-id-card-o"></i>Contacts du consulat</a> 
+                        {% comment %} <a href="index.html"> <i class="bi bi-person-square"></i> Users </a> {% endcomment %}
+                    </li>
+                    <li class="active">
+                        <a href="{% url 'adminapp:etat_civils' %}"> <i class="menu-icon fa fa-bars"></i> Informations sur l'Etat Civil </a> 
+                        {% comment %} <a href="index.html"> <i class="bi bi-person-square"></i> Users </a> {% endcomment %}
+                    </li>
+                    <li class="active">
+                        <a href="{% url 'adminapp:visa_infos' %}"> <i class="menu-icon fa fa-th"></i>Informations sur les visas </a> 
+                        {% comment %} <a href="index.html"> <i class="bi bi-person-square"></i> Users </a> {% endcomment %}
+                    </li>
+                    
                     {% comment %} <h3 class="menu-title">UI elements</h3><!-- /.menu-title -->
                     <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-laptop"></i>Components</a>
@@ -214,7 +227,7 @@
                 <div class="col-sm-7">
                     <a id="menuToggle" class="menutoggle pull-left"><i class="fa fa fa-tasks"></i></a>
                     <div class="page-title">
-                        <h1> Manage Website </h1>
+                        <h1> Gérer le site Web </h1>
                     </div>
                 </div>
 
@@ -226,11 +239,11 @@
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile </a>
+                            {% comment %} <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile </a>
 
                             <a class="nav-link" href="#"><i class="fa fa-user"></i> Notifications <span class="count">13</span></a>
 
-                            <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings </a>
+                            <a class="nav-link" href="#"><i class="fa fa-cog"></i> Settings </a> {% endcomment %}
 
                             <a class="nav-link" href="{% url 'usersmanagement:logout' %}"><i class="fa fa-power-off"></i> Logout </a>
                         </div>
@@ -261,7 +274,7 @@
                         </div>
                     </div>
                     <div class="user-area dropdown float-right">
-                        <a class="nav-link" href="{% url 'app1:home' %}"><i class="fa fa-eye"></i> Visite website</a>
+                        <a class="nav-link" href="{% url 'app1:home' %}"><i class="fa fa-eye"></i> Visiter le site Web </a>
                     </div>
 
                 </div>
@@ -274,7 +287,7 @@
             <div class="col-sm-4">
                 <div class="page-header float-left">
                     <div class="page-title">
-                        <h1>Dashboard</h1>
+                        <h1>Tableau de bord</h1>
                     </div>
                 </div>
             </div>
@@ -282,7 +295,7 @@
                 <div class="page-header float-right">
                     <div class="page-title">
                         <ol class="breadcrumb text-right">
-                            <li class="active">Dashboard</li>
+                            <li class="active">Tableau de bord</li>
                         </ol>
                     </div>
                 </div>

@@ -198,3 +198,9 @@ msgstr "Ministère de l'Industrie, de l'Artisanat et du Tourisme"
 
 msgid "مهام القنصليةlll" 
 msgstr "Fonctions consulaires"
+
+msgid "cliquez ici pour télécharger notre application mobile pour Android"
+msgstr "cliquez ici pour télécharger notre application mobile pour Android"
+
+msgid "nos applications"
+msgstr "nos applications"

@@ -7,7 +7,7 @@
 <div class="container">
     <div class="col-sm-12">
         <div class="alert  alert-success " role="alert">
-            <h3> Create New  <span class="badge badge-pill badge-success">   User </span> <h3>
+            <h3> Mettre à jour <span class="badge badge-pill badge-success"> l'utilisateur </span> <h3>
         </div>
     </div>        
     <div class="modal-body ">
@@ -16,20 +16,20 @@
           {% csrf_token %}
             <div class="form-row">
               <div class="form-group col-md-6">
-                <label for="firstName">First Name:</label>
+                <label for="firstName">Prénom:</label>
                 <input type="text" class="form-control" id="firstName" name="firstName" class="form-control"  placeholder="First Name" value={{user_data.firstName}}>
               </div>
               <div class="form-group col-md-6">
-                <label for="lastName">Last Name:</label>
+                <label for="lastName">Nom:</label>
                 <input type="text" class="form-control" id="lastName" name="lastName"  class="form-control" placeholder="Last Name" value={{user_data.lastName}}>
               </div>
             </div>
             <div class="form-group">
-                <label for="phoneNumber">Phone Number:</label>
+                <label for="phoneNumber">Numéro de téléphone:</label>
                 <input type="number" class="form-control" id="phoneNumber" name="phoneNumber" class="form-control"  placeholder="Phone Number" value={{user_data.phoneNumber}}>
             </div>
             <div class="form-group">
-                <label for="email">Email:</label>
+                <label for="email">E-mail:</label>
                 <input type="email" class="form-control" id="email" name="email" class="form-control"  placeholder="Email" value={{user_data.email}}>
             </div>
             {% comment %} <div class="form-group">
@@ -46,7 +46,7 @@
             <div>
                 <button id="payment-button" type="submit" class="btn btn-lg btn-success btn-block ">
                     {% comment %} <i class="fa fa-sending fa-sending"></i>&nbsp; {% endcomment %}
-                    <span id="payment-button-amount">Update</span>
+                    <span id="payment-button-amount">Mettre à jour</span>
                     {% comment %} <span id="payment-button-sending" style="display:none;">en cours de Publication ………</span> {% endcomment %}
                 </button>
             </div>

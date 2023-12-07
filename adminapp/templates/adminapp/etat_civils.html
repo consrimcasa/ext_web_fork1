@@ -1,0 +1,55 @@
+{% extends 'base_admin.html'%}
+{% block content %}
+
+<div class="content mt-3">
+
+    <div class="col-sm-12" >
+        <div class="col-11 alert  alert-success " role="alert">
+            <h3> Gérez vos Informations sur   <span class="badge badge-pill badge-success">  l'Etat Civil</span> <h3>
+        </div>
+        <div class="col-1  alert  alert-success">
+            <a class="add-btn btn  btn-outline-success" role="button" data-url="#", href="{% url 'adminapp:newetat_civil' %}">
+                <i class="fa  fa-plus" ></i>
+            </a>
+        </div>
+        <!-- <div class="row">
+            <div> Add Address </div>
+            <div> Add Numbers </div>
+            <div> Add E-mail </div>
+
+        </div> -->
+    </div>
+
+
+    <div class="col-sm-12 col-lg-12">
+
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Type de demande</th>
+                <th>Frais</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for etat_civil in etat_civils %}
+            <tr>
+                <td>{{ etat_civil.type_de_demande}}</td>
+                <td>{{ etat_civil.frais}}</td>
+                <th>
+                    
+                    <a class="update-btn btn btn-outline-success"  role="button" href="{% url 'adminapp:update_etat_civil' etat_civil.id %}" >
+                        <i class="fa fa-edit"></i>
+                    </a>
+                    <a class="delete-btn btn btn-outline-danger" role="button" onclick="return confirm('Etes-vous sûr de vouloir supprimer cet état civil ?') ;"  href="{% url 'adminapp:delete_etat_civil' etat_civil.id %}">
+                       <i class="fa fa-trash-o"></i>
+                    </a> 
+            
+                </th>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock%}

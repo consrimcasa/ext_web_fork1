@@ -1,0 +1,40 @@
+{% extends 'base_admin.html'%}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container">
+    <div class="col-sm-12">
+        <div class="alert  alert-success " role="alert">
+            <h3> Mettre à jour les informations   <span class="badge badge-pill badge-success">   L'Etat Civil </span> <h3>
+        </div>
+    </div>        
+    <div class="modal-body ">
+        <!-- form -->
+        <form method="POST" action=" {% url 'adminapp:update_etat_civil' etat_civil_data.id %} ">
+          {% csrf_token %}
+            {% comment %} <h4>{{ etat_civil_data.type_de_demande}} </h4> {% endcomment %}
+            <div class="form-group">
+                <label for="type_de_demande"> Type de demande :</label>
+                <input type="text" class="form-control" id="type_de_demande" name="type_de_demande" class="form-control"  placeholder="Type de demande" value={{ etat_civil_data.type_de_demande}}>
+            </div>
+            <div class="form-group">
+                <label for="frais"> Frais :</label>
+                <input type="number" class="form-control" id="frais" name="frais" class="form-control"  placeholder="Frais" value={{ etat_civil_data.frais}}>
+            </div>
+           
+           
+            {% comment %} <button type="submit" class="btn btn-primary"> Publier </button> {% endcomment %}
+            <div>
+                <button id="payment-button" type="submit" class="btn btn-lg btn-success btn-block ">
+                    {% comment %} <i class="fa fa-sending fa-sending"></i>&nbsp; {% endcomment %}
+                    <span id="payment-button-amount">Mettre à jour </span>
+                    {% comment %} <span id="payment-button-sending" style="display:none;">en cours de Publication ………</span> {% endcomment %}
+                </button>
+            </div>
+          </form>
+    </div>
+</div>
+
+{% endblock%}

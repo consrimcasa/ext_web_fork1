@@ -5,7 +5,7 @@
 
     <div class="col-sm-12" >
         <div class="col-11 alert  alert-success " role="alert">
-            <h3> Manage Your  <span class="badge badge-pill badge-success">   Users </span> <h3>
+            <h3> Gérez vos  <span class="badge badge-pill badge-success">   Utilisateurs </span> <h3>
         </div>
         <div class="col-1  alert  alert-success">
             <a class="add-btn btn  btn-outline-success" role="button" data-url="#", href="{% url 'usersmanagement:create' %}">
@@ -20,10 +20,10 @@
     <table id="example" class="table table-striped table-bordered" style="width:100%">
         <thead>
             <tr>
-                <th>firstName</th>
-                <th>lastName</th>
-                <th>phoneNumber</th>
-                <th>email</th>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Numéro de téléphone</th>
+                <th>E-mail</th>
                 <th>Action</th>
             </tr>
         </thead>
@@ -48,10 +48,10 @@
                     <a class="update-btn btn btn-outline-success"  role="button" href="{% url 'usersmanagement:update_user' user.id %}" >
                         <i class="fa fa-edit"></i>
                     </a>
-                    <a class="delete-btn btn btn-outline-danger" role="button" onclick="return confirm('Are you sure you want to delete this user ?') ;"  href="{% url 'usersmanagement:delete_user' user.id %}">
+                    <a class="delete-btn btn btn-outline-danger" role="button" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet utilisateur?') ;"  href="{% url 'usersmanagement:delete_user' user.id %}">
                         <i class="fa fa-trash-o"></i>
                     </a>
-                    <a class="clock-btn btn btn-outline-info" role="button" onclick="return confirm('Are you sure you want to update the password of this user ?') ;"  href="{% url 'usersmanagement:update_password' user.id %}">
+                    <a class="clock-btn btn btn-outline-info" role="button" onclick="return confirm('Êtes-vous sûr de vouloir mettre à jour le mot de passe de cet utilisateur?') ;"  href="{% url 'usersmanagement:update_password' user.id %}">
                         {% comment %} <i class="fa fa-clock"></i> {% endcomment %}
                         <i class="fa fa-lock"></i>
                     </a>

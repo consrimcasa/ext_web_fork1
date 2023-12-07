@@ -1,0 +1,44 @@
+{% extends 'base_admin.html'%}
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+
+{% block content %}
+<div class="container">
+            <div class="col-sm-12">
+                <div class="alert  alert-success " role="alert">
+                    <h3> Créer un nouveau <span class="badge badge-pill badge-success">  Contact Consulat </span> <h3>
+                </div>
+            </div>        
+            <div class="modal-body ">
+                <!-- form -->
+                <form method="POST" action=" {% url 'adminapp:newConsulate_contact' %}">
+                  {% csrf_token %}
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" class="form-control" id="address" name="address" placeholder="Address">
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="phoneNumber1">Numéro de téléphone 1 </label>
+                        <input type="number" class="form-control" id="phoneNumber1" name="phoneNumber1" placeholder="Phone Number 1">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="phoneNumber2">Numéro de téléphone 2</label>
+                        <input type="text" class="form-control" id="phoneNumber2" name="phoneNumber2" placeholder="PhoneNumber 2">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">E-mail</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
+                    </div>
+                    {% comment %} <button type="submit" class="btn btn-primary"> Publier </button> {% endcomment %}
+                    <div>
+                        <button id="payment-button" type="submit" class="btn btn-lg btn-success btn-block ">
+                            <i class="fa fa-lock fa-lg"></i>&nbsp;
+                            <span id="payment-button-amount">soumettre</span>
+                        </button>
+                    </div>
+                  </form>
+            </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base_admin.html'%}
+{% comment %} {% load crispy_forms_tags %} {% endcomment %}
+
+{% block content %}
+<div class="container">
+            <div class="col-sm-12">
+                <div class="alert  alert-success " role="alert">
+                    <h3> Créer une nouvelle Informations sur <span class="badge badge-pill badge-success"> Etat Civil </span> <h3>
+                </div>
+            </div>        
+            <div class="modal-body ">
+                <!-- form -->
+                <form method="POST" action=" {% url 'adminapp:newetat_civil' %}">
+                  {% csrf_token %}
+                    <div class="form-group">
+                        <label for="type_de_demande">Type de demande</label>
+                        <input type="text" class="form-control" id="type_de_demande" name="type_de_demande" placeholder="Type de demande">
+                    </div>
+                    <div class="form-group">
+                        <label for="frais">Frais</label>
+                        <input type="Number" class="form-control" id="frais" name="frais" placeholder="Frais">
+                    </div>
+                    {% comment %} <button type="submit" class="btn btn-primary"> Publier </button> {% endcomment %}
+                    <div>
+                        <button id="payment-button" type="submit" class="btn btn-lg btn-success btn-block ">
+                            <i class="fa fa-lock fa-lg"></i>&nbsp;
+                            <span id="payment-button-amount">soumettre</span>
+                        </button>
+                    </div>
+                  </form>
+            </div>
+</div>
+
+{% endblock %}

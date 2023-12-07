@@ -1,0 +1,78 @@
+{% extends 'base_admin.html'%}
+{% block content %}
+
+<div class="content mt-3">
+
+    <div class="col-sm-12" >
+        <div class="col-11 alert  alert-success " role="alert">
+            <h3> Gérez vos Informations sur <span class="badge badge-pill badge-success">  les Visas </span> <h3>
+        </div>
+        <div class="col-1  alert  alert-success">
+            <a class="add-btn btn  btn-outline-success" role="button" data-url="#", href="{% url 'adminapp:newvisa_info' %}">
+                <i class="fa  fa-plus" ></i>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="col-sm-12 col-lg-12">
+
+    <table id="example" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th> Monde </th>
+                <th> Nomber Jours </th>
+                <th> Frais </th>
+                <th> Actions </th>
+            </tr>
+            
+        </thead>
+        <tbody>
+            {% for visa_info in visa_infos %}
+
+                <tr>
+                    <th rowspan="6" class="mt-6 text-center" > {{ visa_info.monde}} </th>
+                    <td>30 jours</td>
+                    <td> {{ visa_info.30_jours}}</td>
+                    
+                    <th rowspan="6" class="mt-6 text-center" > 
+                        <a class="update-btn btn btn-outline-success"  role="button" href="{% url 'adminapp:update_visa_info' visa_info.id %}" >
+                            <i class="fa fa-edit"></i>
+                        </a>
+                        <a class="delete-btn btn btn-outline-danger" role="button" onclick="return confirm('Etes-vous sûr de vouloir supprimer ces informations de visa ?') ;"  href="{% url 'adminapp:delete_visa_info' visa_info.id %}">
+                           <i class="fa fa-trash-o"></i>
+                        </a>     
+                    </th>
+                </tr>
+                <tr>
+                    <td>90 jours</td>
+                    <td> {{ visa_info.90_jours}} </td>
+                    
+                </tr>
+                <tr>
+                    <td>de 3 mois à 1 an</td>
+                    <td> {{ visa_info.de_3_mois_à_1_an}} </td>
+                    
+                </tr>
+                <tr>
+                    <td>de 1 à 2 ans</td>
+                    <td> {{ visa_info.de_1_à_2_ans}} </td>
+                   
+                </tr>
+                <tr>
+                    <td>de 2 à 3 ans</td>
+                    <td> {{ visa_info.de_2_à_3_ans}} </td>
+                    
+                </tr>
+                <tr>
+                    <td>de 3 ans et plus</td>
+                    <td> {{ visa_info.de_3_ans_et_plus}} </td>
+                    
+                </tr>
+            
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock%}
