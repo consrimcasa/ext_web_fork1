@@ -40,7 +40,7 @@ firebase_admin.initialize_app(firebase_credentials)
 SECRET_KEY = 'django-insecure-(e$r9#zt2&)j-zo$^eeru5%+#lb4l1cdtz2e_$*()_ec=32kdt'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
