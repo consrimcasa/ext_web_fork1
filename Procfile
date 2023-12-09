@@ -1,0 +1,1 @@
+web: gunicorn minister_ext.wsgi
